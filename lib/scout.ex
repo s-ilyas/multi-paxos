@@ -5,9 +5,9 @@
 
 defmodule Scout do
   def start(l_pid, acceptors, b_num) do
-    # send intial of b_num to all acceptors
-    for a <- acceptors, do: send a, {:scout_p1a, self(), b_num}
-    next l_pid, acceptors, b_num, MapSet.new(acceptors), MapSet.new()
+    # send proposal of b_num to all acceptors
+    for a_pid <- acceptors, do: send a_pid, {:scout_p1a, self(), b_num}
+    next(l_pid, acceptors, b_num, MapSet.new(acceptors), MapSet.new())
   end
 
   defp next(l_pid, acceptors, b_num, waitfor, p_vals) do
