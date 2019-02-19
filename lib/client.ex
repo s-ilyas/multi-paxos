@@ -1,3 +1,4 @@
+# Ilyas Saltykov (is916) and Shashwat Dalal (spd16)
 
 # distributed algorithms, n.dulay 11 feb 19
 # coursework 2, paxos made moderately complex
