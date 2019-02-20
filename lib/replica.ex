@@ -8,7 +8,7 @@ defmodule Replica do
 
   defp next(leaders, database_pid, window, slot_in, slot_out, requests, proposals, decisions) do
     receive do
-      {:client_request, cmd} ->
+      {:client_request, {_,_,cmd}} ->
         #IO.puts "CLIENT_REQUEST"
         requests = requests ++ [cmd]
         propose(leaders, database_pid, window, slot_in, slot_out, requests, proposals, decisions)
