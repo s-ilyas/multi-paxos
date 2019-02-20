@@ -23,10 +23,11 @@ defmodule Scout do
             # kill node
             exit()
           end
+          next(l_pid, acceptors, b_num, waitfor, p_vals)
         else
           # an acceptor has rejected our proposal because it
           # has already received a higher ballot number
-          send l_pid, {:scout_preempted, a_b_num}
+          send l_pid, {:preempt_leader, a_b_num}
           exit()
         end
     end

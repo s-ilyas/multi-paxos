@@ -17,19 +17,23 @@ defmodule Acceptor do
       {:scout_p1a, s_pid, s_b_num} ->
         # if condition is true then proposal accepted
         # otherwise proposal rejected
-        if s_b_num > b_num do
-          # proposal accepted
-          b_num = s_b_num
-        end
+        b_num =
+          case  s_b_num > b_num do
+            true -> s_b_num
+            false -> b_num
+          end
         send s_pid, {:acceptor_p1b, self(), b_num, accepted}
+        next(b_num, accepted)
       {:commander_p2a, c_pid, pvalue} ->
         # if condition not true, then acceptor has seen a higher
         # ballot number, hence cannot procced with commit
-        if c_b_num == b_num do
-          # commit proposed value
-          accepted = MapSet.put(accepted, pvalue)
-        end
+        accepted =
+          case c_b_num == b_num do
+            true -> MapSet.put(accepted, pvalue)
+            false -> accepted
+          end
         send c_pid, {:acceptor_p2b, self(), b_num}
+        next(b_num, accepted)
     end
   end
 end

@@ -23,10 +23,11 @@ defmodule Commander do
             # kill node
             exit()
           end
+          next(l_pid, acceptors, replicas, waitfor, pval)
         else
           # an acceptor has rejected our request for commit because it
           # has already received a higher ballot number
-          send l_pid, {:commander_preempted, a_b_num}
+          send l_pid, {:preempt_leader, a_b_num}
           exit()
         end
     end
