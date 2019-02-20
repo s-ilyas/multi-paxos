@@ -17,7 +17,7 @@ defmodule Scout do
           # update our proposed values
           p_vals = MapSet.union(p_vals, a_p_vals)
           waitfor = MapSet.delete(waitfor, a_pid)
-          if MapSet.size(waitfor) < (MapSet.size(acceptors) / 2) do
+          if MapSet.size(waitfor) < (length(acceptors) / 2) do
             # majority of acceptors have made a promise on our proposal
             send l_pid, {:scout_adopted, b_num, p_vals}
             # kill node

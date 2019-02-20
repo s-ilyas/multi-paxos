@@ -1,16 +1,21 @@
 defmodule Replica do
 
-  def start(leaders, database_pid, window) do
-    next(leaders, database_pid, window, 1, 1, [], Map.new, Map.new)
+  def start(config, database_pid, _) do
+    receive do
+      {:bind, leaders} -> next(leaders, database_pid, config.window, 1, 1, [], Map.new, Map.new)
+    end
   end
 
   defp next(leaders, database_pid, window, slot_in, slot_out, requests, proposals, decisions) do
-    recieve do
+    receive do
       {:client_request, cmd} ->
+        #IO.puts "CLIENT_REQUEST"
         requests = requests ++ [cmd]
         propose(leaders, database_pid, window, slot_in, slot_out, requests, proposals, decisions)
       {:commander_decision, slot, cmd} ->
+        #IO.puts "COMMANDER_DECISION"
         decisions = Map.put(decisions, slot, {slot, cmd})
+        process_decision(leaders, database_pid, window, slot_in, slot_out, requests, proposals, decisions)
     end
   end
 
@@ -20,7 +25,7 @@ defmodule Replica do
       # decisions contain command at slot_out
       if Map.has_key?(proposals, slot_out) do
         # proposal also contain command at slot_out so update proposals and requests accordingly
-        {{_, proposal_cmd} | proposals} = Map.pop(proposals, slot_out)
+        {{_, proposal_cmd}, proposals} = Map.pop(proposals, slot_out)
         requests =
           case decision_cmd == proposal_cmd do
             true -> requests
@@ -28,9 +33,9 @@ defmodule Replica do
             # so re-add the proposal command to requests
             false -> requests ++ [proposal_cmd]
           end
-        perform(leaders, database_pid, window, slot_in, slot_out, requests, proposals, decision_cmd)
+        perform(leaders, database_pid, window, slot_in, slot_out, requests, proposals, decisions, decision_cmd)
       else
-        perform(leaders, database_pid, window, slot_in, slot_out, requests, proposals, decision_cmd)
+        perform(leaders, database_pid, window, slot_in, slot_out, requests, proposals, decisions, decision_cmd)
       end
     else
       # end performing decisions, as decisions do not contain values at slot_out
@@ -63,7 +68,7 @@ defmodule Replica do
       propose(leaders, database_pid, window, slot_in + 1, slot_out, requests, proposals, decisions)
     else
       # stop proposing requests as it oustide window
-      next(leaders, database_pid, window, slot_in, slot_out, requests, proposals, decisions)
+      next(leaders, database_pid, window, slot_in, slot_out, [req | reqs], proposals, decisions)
     end
   end
 

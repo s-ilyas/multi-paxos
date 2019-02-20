@@ -1,13 +1,17 @@
 defmodule Leader do
-  def start(l_id, acceptors, replicas) do
-    b_num = {0, l_id}
-    spawn(Scout, :start, [self(), acceptors, b_num])
-    next(acceptors, replicas, b_num, false, MapSet.new())
+  def start(l_id, _) do
+    receive do
+      {:bind, acceptors, replicas} ->
+        b_num = {0, l_id}
+        spawn(Scout, :start, [self(), acceptors, b_num])
+        next(acceptors, replicas, b_num, false, MapSet.new())
+    end
   end
 
   defp next(acceptors, replicas, b_num, active, proposals) do
     receive do
       {:replica_propose, slot_num, cmd} ->
+        #IO.puts "REPLICA PROPOSE"
         unless Map.has_key?(proposals, slot_num) do
           # if slot is not in proposal map
           proposals = Map.put(proposals, slot_num, cmd)
@@ -19,20 +23,24 @@ defmodule Leader do
           next(acceptors, replicas, b_num, active, proposals)
         end
       {:scout_adopted, scout_b_num, pvals} ->
+        IO.puts "SCOUT ADOPTED"
         # majority number of acceptors have the same b_num as requested proposal
-        proposals = update_proposals(MapSet.to_list(proposals), pmax(pvals, Map.new()), MapSet.new())
-        Enum.each(proposals, fn {s, c} ->
-            p_val = {b_num, s, c}
+        proposals = update_proposals(MapSet.to_list(proposals), pmax(MapSet.to_list(pvals), Map.new()), MapSet.new())
+        Enum.each(
+          proposals,
+          fn {s, c} ->
+            p_val = {scout_b_num, s, c}
             spawn(Commander, :start, [self(), acceptors, replicas, p_val])
-        end)
+          end
+        )
         next(acceptors, replicas, b_num, true, proposals)
       {:preempt_leader, preempt_b_num = {sqn, _}} ->
+        IO.puts "PREMPTED LEADER"
         if preempt_b_num > b_num do
           # cannot go throught with proposal or commit as a acceptor has b_num greater than the b_num that has been
           # proposed or sent for commit
           # hence increment to ballot number to the lowest possible number that can still be accepted by acceptors
-          active = false
-          b_num = {sqn + 1, l_id}
+          b_num = {sqn + 1, elem(b_num, 1)}
           spawn(Scout, :start, [self(), acceptors, b_num])
           next(acceptors, replicas, b_num, false, proposals)
         else
@@ -45,30 +53,39 @@ defmodule Leader do
     max_pvals
   end
 
-  defp pmax([pval={b_num, slot_num, cmd} | pvals], max_pvals) do
-    pmax(pvals, elem(Map.get_and_update(max_pvals, slot_num, fn val ->
-      if val != nil do
-        # exits in map
-        if elem(val,0) < b_num do
-          # current b_num is larger so replace it
-          {val, pval}
-        else
-          # no not update
-          {val, val}
-        end
-      else
-        # does not exist in map
-        {val, pval}
-      end
-    end),1))
+  defp pmax([pval = {b_num, slot_num, _} | pvals], max_pvals) do
+    pmax(pvals, elem( Map.get_and_update(max_pvals, slot_num, fn val ->
+            if val != nil do
+              # exits in map
+              if elem(val, 0) < b_num do
+                # current b_num is larger so replace it
+                {val, pval}
+              else
+                # no not update
+                {val, val}
+              end
+            else
+              # does not exist in map
+              {val, pval}
+            end
+          end
+        ),
+        1
+      )
+    )
   end
 
   defp update_proposals([], _, updated_proposals) do
+    IO.puts "UPDATE PROPOSAL BASE"
     updated_proposals
   end
 
   defp update_proposals([{slot_num, cmd} | proposals], max_pvals, updated_proposals) do
-    update_proposals(proposals, max_pvals,
-      MapSet.put(updated_proposals, {slot_num, elem(Map.get(max_pvals, slot_num, {-1, -1, cmd}), 2)}))
+    IO.puts "UPDATE PROPOSAL REC"
+    update_proposals(
+      proposals,
+      max_pvals,
+      MapSet.put(updated_proposals, {slot_num, elem(Map.get(max_pvals, slot_num, {-1, -1, cmd}), 2)})
+    )
   end
 end

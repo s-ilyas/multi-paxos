@@ -20,7 +20,8 @@ def version :default do
 
   print_after:  1_000,		# print transaction log summary every print_after msecs
 
-  crash_server: %{},  
+  crash_server: %{},
+  window: 10
 
   }
 end
@@ -42,9 +43,8 @@ end
 # -----------------------------------------------------------------------------
 
 def version :crashes do		# settings for crashing servers
-  config = version :default 
+  config = version :default
   # settings omitted
-  }
 end
 
 end # module ----------------------------------------------------------------

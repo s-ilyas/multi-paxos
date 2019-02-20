@@ -17,7 +17,7 @@ defmodule Commander do
         if b_num == a_b_num do
           # update our proposed values
           waitfor = MapSet.delete(waitfor, a_pid)
-          if MapSet.size(waitfor) < (MapSet.size(acceptors) / 2) do
+          if MapSet.size(waitfor) < (length(acceptors) / 2) do
             # majority of acceptors have commited our request so send all replicas the decision
             for r_pid <- replicas, do: send r_pid, {:commander_decision, slot_num, cmd}
             # kill node
