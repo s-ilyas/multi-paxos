@@ -6,6 +6,7 @@
 defmodule Acceptor do
 
   def start(_) do
+    IO.puts "Acceptor #{inspect(self())} comes alive"
     # -1 instead of the default BOTTOM value
     b_num = -1
     accepted = MapSet.new()
@@ -26,7 +27,7 @@ defmodule Acceptor do
         next(b_num, accepted)
       {:commander_p2a, c_pid, pvalue = {c_b_num, _, _}} ->
         # if condition not true, then acceptor has seen a higher
-        # ballot number, hence cannot procced with commit
+        # ballot number, hence cannot proceed with commit
         accepted =
           case c_b_num == b_num do
             true -> MapSet.put(accepted, pvalue)

@@ -1,14 +1,17 @@
 defmodule Leader do
-  def start(l_id, _) do
+  def start(config, monitor) do
     receive do
       {:bind, acceptors, replicas} ->
-        b_num = {0, l_id}
-        spawn(Scout, :start, [self(), acceptors, b_num])
-        next(acceptors, replicas, b_num, false, MapSet.new())
+        b_num = {0, config.server_num} # special case where we use SERVER_NUM instead of self()
+
+        spawn(Scout, :start, [monitor, config, self(), acceptors, b_num])
+        send monitor, {:scout_spawned, config.server_num} #notify monitor
+
+        next(monitor, config, acceptors, replicas, b_num, false, MapSet.new())
     end
   end
 
-  defp next(acceptors, replicas, b_num, active, proposals) do
+  defp next(monitor, config, acceptors, replicas, b_num, active, proposals) do
     receive do
       {:replica_propose, slot_num, cmd} ->
         #IO.puts "REPLICA PROPOSE"
@@ -18,33 +21,38 @@ defmodule Leader do
           if active do
             # if waiting for a commit to happen on b_num
             p_val = {b_num, slot_num, cmd}
-            spawn(Commander, :start, [self(), acceptors, replicas, p_val])
+
+            spawn(Commander, :start, [monitor, config, self(), acceptors, replicas, p_val])
+            send monitor, {:commander_spawned, config.server_num} #notify monitor
           end
-          next(acceptors, replicas, b_num, active, proposals)
+          next(monitor, config, acceptors, replicas, b_num, active, proposals)
         end
       {:scout_adopted, scout_b_num, pvals} ->
-        IO.puts "SCOUT ADOPTED"
+        IO.puts "SCOUT ADOPTED: proposals=#{inspect(proposals)}"
         # majority number of acceptors have the same b_num as requested proposal
         proposals = update_proposals(MapSet.to_list(proposals), pmax(MapSet.to_list(pvals), Map.new()), MapSet.new())
         Enum.each(
           proposals,
           fn {s, c} ->
             p_val = {scout_b_num, s, c}
-            spawn(Commander, :start, [self(), acceptors, replicas, p_val])
+            spawn(Commander, :start, [monitor, config, self(), acceptors, replicas, p_val])
+            send monitor, {:commander_spawned, config.server_num} #notify monitor
           end
         )
-        next(acceptors, replicas, b_num, true, proposals)
+        next(monitor, config, acceptors, replicas, b_num, true, proposals)
       {:preempt_leader, preempt_b_num = {sqn, _}} ->
-        IO.puts "PREMPTED LEADER"
+        IO.puts "PREEMPTED LEADER"
         if preempt_b_num > b_num do
           # cannot go throught with proposal or commit as a acceptor has b_num greater than the b_num that has been
           # proposed or sent for commit
           # hence increment to ballot number to the lowest possible number that can still be accepted by acceptors
           b_num = {sqn + 1, elem(b_num, 1)}
-          spawn(Scout, :start, [self(), acceptors, b_num])
-          next(acceptors, replicas, b_num, false, proposals)
+          spawn(Scout, :start, [monitor, config, self(), acceptors, b_num])
+          send monitor, {:scout_spawned, config.server_num} # notify monitor
+
+          next(monitor, config, acceptors, replicas, b_num, false, proposals)
         else
-          next(acceptors, replicas, b_num, active, proposals)
+          next(monitor, config, acceptors, replicas, b_num, active, proposals)
         end
     end
   end

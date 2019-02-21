@@ -13,7 +13,7 @@ defmodule Server do
 
     database = spawn Database, :start, [config, monitor]
     replica = spawn Replica, :start, [config, database, monitor]
-    leader = spawn Leader, :start, [server_num, config]
+    leader = spawn Leader, :start, [config, monitor]
     acceptor = spawn Acceptor, :start, [config]
 
     send multipaxos, {:config, replica, acceptor, leader}
