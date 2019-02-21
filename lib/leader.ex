@@ -7,7 +7,7 @@ defmodule Leader do
         spawn(Scout, :start, [monitor, config, self(), acceptors, b_num])
         send monitor, {:scout_spawned, config.server_num} #notify monitor
 
-        next(monitor, config, acceptors, replicas, b_num, false, MapSet.new())
+        next(monitor, config, acceptors, replicas, b_num, false, Map.new())
     end
   end
 
@@ -28,9 +28,9 @@ defmodule Leader do
           next(monitor, config, acceptors, replicas, b_num, active, proposals)
         end
       {:scout_adopted, scout_b_num, pvals} ->
-        IO.puts "SCOUT ADOPTED: proposals=#{inspect(proposals)}"
+        IO.puts "SCOUT ADOPTED: proposals=#{Map.size(proposals)}"
         # majority number of acceptors have the same b_num as requested proposal
-        proposals = update_proposals(MapSet.to_list(proposals), pmax(MapSet.to_list(pvals), Map.new()), MapSet.new())
+        proposals = update_proposals(proposals, Map.to_list(pmax(MapSet.to_list(pvals), Map.new())))
         Enum.each(
           proposals,
           fn {s, c} ->
@@ -39,11 +39,12 @@ defmodule Leader do
             send monitor, {:commander_spawned, config.server_num} #notify monitor
           end
         )
+        IO.puts "SCOUT ADOPTED: NEW proposals=#{Map.size(proposals)}"
         next(monitor, config, acceptors, replicas, b_num, true, proposals)
       {:preempt_leader, preempt_b_num = {sqn, _}} ->
-        IO.puts "PREEMPTED LEADER"
+        #IO.puts "PREEMPTED LEADER"
         if preempt_b_num > b_num do
-          # cannot go throught with proposal or commit as a acceptor has b_num greater than the b_num that has been
+          # cannot go through with proposal or commit as a acceptor has b_num greater than the b_num that has been
           # proposed or sent for commit
           # hence increment to ballot number to the lowest possible number that can still be accepted by acceptors
           b_num = {sqn + 1, elem(b_num, 1)}
@@ -83,17 +84,16 @@ defmodule Leader do
     )
   end
 
-  defp update_proposals([], _, updated_proposals) do
-    IO.puts "UPDATE PROPOSAL BASE"
-    updated_proposals
+  defp update_proposals(proposals, []) do
+    #IO.puts "UPDATE PROPOSAL BASE=#{Map.size(proposals)}"
+    proposals
   end
 
-  defp update_proposals([{slot_num, cmd} | proposals], max_pvals, updated_proposals) do
-    IO.puts "UPDATE PROPOSAL REC"
+  defp update_proposals(proposals, [{slot_num, cmd} | max_pvals]) do
+    #IO.puts "UPDATE PROPOSAL REC=#{Map.size(proposals)}"
     update_proposals(
-      proposals,
-      max_pvals,
-      MapSet.put(updated_proposals, {slot_num, elem(Map.get(max_pvals, slot_num, {-1, -1, cmd}), 2)})
+      Map.put(proposals, slot_num, cmd),
+      max_pvals
     )
   end
 end
