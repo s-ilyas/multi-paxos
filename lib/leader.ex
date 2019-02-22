@@ -3,7 +3,6 @@ defmodule Leader do
     receive do
       {:bind, acceptors, replicas} ->
         b_num = {0, config.server_num} # special case where we use SERVER_NUM instead of self()
-
         spawn(Scout, :start, [monitor, config, self(), acceptors, b_num])
         send monitor, {:scout_spawned, config.server_num} #notify monitor
 
@@ -14,21 +13,20 @@ defmodule Leader do
   defp next(monitor, config, acceptors, replicas, b_num, active, proposals) do
     receive do
       {:replica_propose, slot_num, cmd} ->
-        #IO.puts "REPLICA PROPOSE"
         unless Map.has_key?(proposals, slot_num) do
           # if slot is not in proposal map
           proposals = Map.put(proposals, slot_num, cmd)
           if active do
             # if waiting for a commit to happen on b_num
             p_val = {b_num, slot_num, cmd}
-
-            spawn(Commander, :start, [monitor, config, self(), acceptors, replicas, p_val])
+            c_pid = spawn(Commander, :start, [monitor, config, self(), acceptors, replicas, p_val])
+            #IO.puts "Leader #{inspect(self())} Spawning commander #{inspect(c_pid)} with p_val: #{inspect(p_val)}"
             send monitor, {:commander_spawned, config.server_num} #notify monitor
           end
           next(monitor, config, acceptors, replicas, b_num, active, proposals)
         end
       {:scout_adopted, scout_b_num, pvals} ->
-        IO.puts "SCOUT ADOPTED: proposals=#{Map.size(proposals)}"
+        IO.puts "Leader #{inspect(self())} has adopted #{inspect(scout_b_num)}"
         # majority number of acceptors have the same b_num as requested proposal
         proposals = update_proposals(proposals, Map.to_list(pmax(MapSet.to_list(pvals), Map.new())))
         Enum.each(
@@ -36,19 +34,23 @@ defmodule Leader do
           fn {s, c} ->
             p_val = {scout_b_num, s, c}
             spawn(Commander, :start, [monitor, config, self(), acceptors, replicas, p_val])
-            send monitor, {:commander_spawned, config.server_num} #notify monitor
+            #IO.puts "Leader #{inspect(self())} Spawning commander #{inspect(c_id)} with p_val: #{inspect(p_val)}"
+            send monitor, {:commander_spawned, config.server_num}
+            #notify monitor
           end
         )
-        IO.puts "SCOUT ADOPTED: NEW proposals=#{Map.size(proposals)}"
         next(monitor, config, acceptors, replicas, b_num, true, proposals)
       {:preempt_leader, preempt_b_num = {sqn, _}} ->
-        #IO.puts "PREEMPTED LEADER"
+        sleep = Enum.random(1..1000)
+        IO.puts "Leader #{inspect(self())} sleeping for #{sleep}"
+        Process.sleep(sleep)
         if preempt_b_num > b_num do
           # cannot go through with proposal or commit as a acceptor has b_num greater than the b_num that has been
           # proposed or sent for commit
           # hence increment to ballot number to the lowest possible number that can still be accepted by acceptors
           b_num = {sqn + 1, elem(b_num, 1)}
-          spawn(Scout, :start, [monitor, config, self(), acceptors, b_num])
+          s_pid = spawn(Scout, :start, [monitor, config, self(), acceptors, b_num])
+          IO.puts "Leader #{inspect(self())} one uped with #{inspect(b_num)} by creating #{inspect(s_pid)}"
           send monitor, {:scout_spawned, config.server_num} # notify monitor
 
           next(monitor, config, acceptors, replicas, b_num, false, proposals)
@@ -63,7 +65,7 @@ defmodule Leader do
   end
 
   defp pmax([pval = {b_num, slot_num, _} | pvals], max_pvals) do
-    pmax(pvals, elem( Map.get_and_update(max_pvals, slot_num, fn val ->
+    pmax(pvals, elem(Map.get_and_update( max_pvals, slot_num, fn val ->
             if val != nil do
               # exits in map
               if elem(val, 0) < b_num do
@@ -74,7 +76,6 @@ defmodule Leader do
                 {val, val}
               end
             else
-              # does not exist in map
               {val, pval}
             end
           end
@@ -89,8 +90,7 @@ defmodule Leader do
     proposals
   end
 
-  defp update_proposals(proposals, [{slot_num, cmd} | max_pvals]) do
-    #IO.puts "UPDATE PROPOSAL REC=#{Map.size(proposals)}"
+  defp update_proposals(proposals, [{slot_num, {_, _, cmd}}=pval | max_pvals]) do
     update_proposals(
       Map.put(proposals, slot_num, cmd),
       max_pvals

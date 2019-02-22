@@ -17,9 +17,7 @@ defmodule Scout do
           # update our proposed values
           p_vals = MapSet.union(p_vals, a_p_vals)
           waitfor = MapSet.delete(waitfor, a_pid)
-          IO.puts "IF-PRE scout_adopted"
           if MapSet.size(waitfor) < (length(acceptors) / 2) do
-            IO.puts "IF-POST scout_adopted"
             # majority of acceptors have made a promise on our proposal
             send l_pid, {:scout_adopted, b_num, p_vals}
             # kill node
@@ -29,6 +27,7 @@ defmodule Scout do
         else
           # an acceptor has rejected our proposal because it
           # has already received a higher ballot number
+          IO.puts "scout #{inspect(self())} preemepted by #{inspect(a_b_num)}"
           send l_pid, {:preempt_leader, a_b_num}
           exit(monitor, config)
         end
@@ -36,7 +35,7 @@ defmodule Scout do
   end
 
   defp exit(monitor, config) do
-    send monitor, {:scout_finished, config.server_num}
+    #send monitor, {:scout_finished, config.server_num}
     Process.exit(self(),:normal)
   end
 

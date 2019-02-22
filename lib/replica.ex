@@ -7,20 +7,21 @@ defmodule Replica do
   end
 
   defp next(monitor, config, leaders, database_pid, window, slot_in, slot_out, requests, proposals, decisions) do
+    #IO.puts "#{inspect(self())} replica_next"
     receive do
-      {:client_request, {_,_,cmd}} ->
-        #IO.puts "CLIENT_REQUEST"
+      {:commander_decision, slot, cmd} ->
+        IO.inspect(cmd)
+        decisions = Map.put(decisions, slot, {slot, cmd})
+        process_decision(monitor, config, leaders, database_pid, window, slot_in, slot_out, requests, proposals, decisions)
+      {:client_request, cmd} ->
         send monitor, {:client_request, config.server_num} #notify monitor that a request has been received
         requests = requests ++ [cmd]
         propose(monitor, config, leaders, database_pid, window, slot_in, slot_out, requests, proposals, decisions)
-      {:commander_decision, slot, cmd} ->
-        #IO.puts "COMMANDER_DECISION"
-        decisions = Map.put(decisions, slot, {slot, cmd})
-        process_decision(monitor, config, leaders, database_pid, window, slot_in, slot_out, requests, proposals, decisions)
     end
   end
 
   defp process_decision(monitor, config, leaders, database_pid, window, slot_in, slot_out, requests, proposals, decisions) do
+    #IO.puts "#{inspect(self())} replica_process_decision"
     if Map.has_key?(decisions, slot_out) do
       {_, decision_cmd} = Map.get(decisions, slot_out)
       # decisions contain command at slot_out
@@ -45,17 +46,17 @@ defmodule Replica do
   end
 
   defp propose(monitor, config, leaders, database_pid, window, slot_in, slot_out, [], proposals, decisions) do
-    # all requests within window were sent to leaders for proposal, so end while loop
+   # all requests within window were sent to leaders for proposal, so end while loop
     next(monitor, config, leaders, database_pid, window, slot_in, slot_out, [], proposals, decisions)
   end
 
   defp propose(monitor, config, leaders, database_pid, window, slot_in, slot_out, [req | reqs], proposals, decisions) do
+    #IO.puts "slot in: #{slot_in} -- slot out: #{slot_out}"
     if (slot_in < slot_out + window) do
       unless Map.has_key?(decisions, slot_in) do
         # slot_in command not in decision
         for l_pid <- leaders, do: send l_pid, {:replica_propose, slot_in, req}
       end
-
       requests =
         case Map.has_key?(decisions, slot_in) do
           false -> reqs
@@ -74,9 +75,9 @@ defmodule Replica do
   end
 
   defp perform(monitor, config, leaders, database_pid, window, slot_in, slot_out, requests, proposals, decisions, command) do
-    cmd_matches = Enum.filter(Map.to_list(decisions), fn {s, cmd} -> cmd == command && s < slot_out end)
+    cmd_matches = Enum.filter(Map.to_list(decisions), fn {s, {_, cmd}} -> cmd == command && s < slot_out end)
     unless length(cmd_matches) > 0 do
-      send database_pid, {:execute, command}
+      send database_pid, {:execute, elem(command,2)}
     end
     process_decision(monitor, config, leaders, database_pid, window, slot_in, slot_out + 1, requests, proposals, decisions)
   end

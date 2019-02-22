@@ -16,6 +16,7 @@ defmodule Acceptor do
   defp next(b_num, accepted) do
     receive do
       {:scout_p1a, s_pid, s_b_num} ->
+        IO.puts "scout #{inspect(s_pid)} proposed #{inspect(s_b_num)} to acceptor #{inspect(self())}"
         # if condition is true then proposal accepted
         # otherwise proposal rejected
         b_num =
