@@ -13,7 +13,6 @@ defmodule Leader do
   defp next(monitor, config, acceptors, replicas, b_num, active, proposals, sleep_time) do
     receive do
       {:replica_propose, slot_num, cmd} ->
-        #IO.puts "=================================A PROPOSAL ARRIVED"
         unless Map.has_key?(proposals, slot_num) do
           # if slot is not in proposal map
           proposals = Map.put(proposals, slot_num, cmd)
@@ -21,7 +20,6 @@ defmodule Leader do
             # if waiting for a commit to happen on b_num
             p_val = {b_num, slot_num, cmd}
             c_pid = spawn(Commander, :start, [monitor, config, self(), acceptors, replicas, p_val])
-            #IO.puts "Leader #{inspect(self())} Spawning commander #{inspect(c_pid)} with p_val: #{inspect(p_val)}"
             send monitor, {:commander_spawned, config.server_num} #notify monitor
           end
           next(monitor, config, acceptors, replicas, b_num, active, proposals, sleep_time)
@@ -31,15 +29,12 @@ defmodule Leader do
       {:scout_adopted, scout_b_num, pvals} ->
         if scout_b_num == b_num do
           # majority number of acceptors have the same b_num as requested proposal
-          #IO.puts "Leader #{inspect(self())} has adopted #{inspect(scout_b_num)}"
-          #proposals = update_proposals(proposals, Map.to_list(pmax(MapSet.to_list(pvals), Map.new())))
-          proposals = update_proposals_test(proposals, MapSet.to_list(pvals), Map.new())
+          proposals = update_proposals(proposals, Map.to_list(pmax(MapSet.to_list(pvals), Map.new())))
           Enum.each(
             proposals,
             fn {s, c} ->
               p_val = {scout_b_num, s, c}
               spawn(Commander, :start, [monitor, config, self(), acceptors, replicas, p_val])
-              #IO.puts "Leader #{inspect(self())} Spawning commander #{inspect(c_id)} with p_val: #{inspect(p_val)}"
               send monitor, {:commander_spawned, config.server_num}
               #notify monitor
             end
@@ -93,7 +88,6 @@ defmodule Leader do
   end
 
   defp update_proposals(proposals, []) do
-    #IO.puts "UPDATE PROPOSAL BASE=#{Map.size(proposals)}"
     proposals
   end
 
@@ -103,20 +97,4 @@ defmodule Leader do
       max_pvals
     )
   end
-
-  defp update_proposals_test(proposals, accepted, pmax) do
-    # Updates proposals for each slot with the slot proposal from the highest ballot
-    if length(accepted) == 0 do
-      proposals
-    else
-      [{ ballot, slot, op } | tail] = accepted
-      if !Map.has_key?(pmax, slot) or Map.get(pmax, slot) < ballot do
-        pmax = Map.put(pmax, slot, ballot)
-        proposals = Map.put(proposals, slot, op)
-        update_proposals_test(proposals, tail, pmax)
-      else
-        update_proposals_test(proposals, tail, pmax)
-      end # if
-    end # if
-  end # update
 end

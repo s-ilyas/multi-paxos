@@ -28,7 +28,6 @@ defmodule Scout do
         else
           # an acceptor has rejected our proposal because it
           # has already received a higher ballot number
-          #IO.puts "scout #{inspect(self())} preempted by #{inspect(a_b_num)}"
           send l_pid, {:preempt_leader, a_b_num}
           exit(monitor, config)
         end

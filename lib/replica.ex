@@ -7,8 +7,6 @@ defmodule Replica do
   end
 
   defp next(monitor, config, leaders, database_pid, window, slot_in, slot_out, requests, proposals, decisions) do
-    #IO.puts "#{inspect(self())} replica_next"
-    #IO.puts "SLOT IN=#{slot_in} SLOT OUT=#{slot_out}"
     receive do
       {:commander_decision, slot, cmd} ->
         decisions = Map.put(decisions, slot, {slot, cmd})
@@ -21,7 +19,6 @@ defmodule Replica do
   end
 
   defp process_decision(monitor, config, leaders, database_pid, window, slot_in, slot_out, requests, proposals, decisions) do
-    #IO.puts "#{inspect(self())} replica_process_decision"
     if Map.has_key?(decisions, slot_out) do
       {_, decision_cmd} = Map.get(decisions, slot_out)
       # decisions contain command at slot_out
@@ -51,8 +48,6 @@ defmodule Replica do
   end
 
   defp propose(monitor, config, leaders, database_pid, window, slot_in, slot_out, [req | reqs], proposals, decisions) do
-    #IO.puts "=================================BITCH I AM TRYING TO PROPOSE"
-    #IO.puts "slot in: #{slot_in} -- slot out: #{slot_out}"
     if (slot_in < slot_out + window) do
       unless Map.has_key?(decisions, slot_in) do
         # slot_in command not in decision
@@ -70,7 +65,6 @@ defmodule Replica do
         end
       propose(monitor, config, leaders, database_pid, window, slot_in + 1, slot_out, requests, proposals, decisions)
     else
-      #IO.puts "=================================CANNOT PROPOSE - SLOT IN TOO LARGE"
       # stop proposing requests as it oustide window
       next(monitor, config, leaders, database_pid, window, slot_in, slot_out, [req | reqs], proposals, decisions)
     end

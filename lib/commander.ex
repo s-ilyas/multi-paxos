@@ -19,7 +19,6 @@ defmodule Commander do
           waitfor = MapSet.delete(waitfor, a_pid)
           if MapSet.size(waitfor) < (length(acceptors) / 2) do
             # majority of acceptors have commited our request so send all replicas the decision
-            #IO.puts "Commander #{inspect(self())} with bnum #{inspect(b_num)} has decided:     #{slot_num} - #{inspect(cmd)}"
             for r_pid <- replicas, do: send r_pid, {:commander_decision, slot_num, cmd}
             # tell leader commander succeeded
             send l_pid, {:commander_success}
@@ -30,7 +29,6 @@ defmodule Commander do
         else
           # an acceptor has rejected our request for commit because it
           # has already received a higher ballot number
-          #IO.puts "Commander #{inspect(self())} with bnum: #{inspect(b_num)} preemepted by bnum: #{inspect(a_b_num)}"
           send l_pid, {:preempt_leader, a_b_num}
           exit(monitor, config)
         end
