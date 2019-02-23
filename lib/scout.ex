@@ -11,6 +11,7 @@ defmodule Scout do
   end
 
   defp next(monitor, config, l_pid, acceptors, b_num, waitfor, p_vals) do
+
     receive do
       {:acceptor_p1b, a_pid, a_b_num, a_p_vals} ->
         if b_num == a_b_num do
@@ -27,7 +28,7 @@ defmodule Scout do
         else
           # an acceptor has rejected our proposal because it
           # has already received a higher ballot number
-          IO.puts "scout #{inspect(self())} preemepted by #{inspect(a_b_num)}"
+          #IO.puts "scout #{inspect(self())} preempted by #{inspect(a_b_num)}"
           send l_pid, {:preempt_leader, a_b_num}
           exit(monitor, config)
         end

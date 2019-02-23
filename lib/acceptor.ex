@@ -6,7 +6,7 @@
 defmodule Acceptor do
 
   def start(_) do
-    IO.puts "Acceptor #{inspect(self())} comes alive"
+    #IO.puts "Acceptor #{inspect(self())} comes alive"
     # -1 instead of the default BOTTOM value
     b_num = -1
     accepted = MapSet.new()
@@ -16,17 +16,13 @@ defmodule Acceptor do
   defp next(b_num, accepted) do
     receive do
       {:scout_p1a, s_pid, s_b_num} ->
-        IO.puts "scout #{inspect(s_pid)} proposed #{inspect(s_b_num)} to acceptor #{inspect(self())}"
+        #IO.puts "scout #{inspect(s_pid)} proposed #{inspect(s_b_num)} to acceptor #{inspect(self())}"
         # if condition is true then proposal accepted
         # otherwise proposal rejected
-        b_num =
-          case  s_b_num > b_num do
-            true -> s_b_num
-            false -> b_num
-          end
+        b_num = max(s_b_num, b_num)
         send s_pid, {:acceptor_p1b, self(), b_num, accepted}
         next(b_num, accepted)
-      {:commander_p2a, c_pid, pvalue = {c_b_num, _, _}} ->
+      {:commander_p2a, c_pid, {c_b_num, _, _} = pvalue} ->
         # if condition not true, then acceptor has seen a higher
         # ballot number, hence cannot proceed with commit
         accepted =

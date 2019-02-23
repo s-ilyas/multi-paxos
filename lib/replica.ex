@@ -8,9 +8,9 @@ defmodule Replica do
 
   defp next(monitor, config, leaders, database_pid, window, slot_in, slot_out, requests, proposals, decisions) do
     #IO.puts "#{inspect(self())} replica_next"
+    #IO.puts "SLOT IN=#{slot_in} SLOT OUT=#{slot_out}"
     receive do
       {:commander_decision, slot, cmd} ->
-        IO.inspect(cmd)
         decisions = Map.put(decisions, slot, {slot, cmd})
         process_decision(monitor, config, leaders, database_pid, window, slot_in, slot_out, requests, proposals, decisions)
       {:client_request, cmd} ->
@@ -51,6 +51,7 @@ defmodule Replica do
   end
 
   defp propose(monitor, config, leaders, database_pid, window, slot_in, slot_out, [req | reqs], proposals, decisions) do
+    #IO.puts "=================================BITCH I AM TRYING TO PROPOSE"
     #IO.puts "slot in: #{slot_in} -- slot out: #{slot_out}"
     if (slot_in < slot_out + window) do
       unless Map.has_key?(decisions, slot_in) do
@@ -69,14 +70,14 @@ defmodule Replica do
         end
       propose(monitor, config, leaders, database_pid, window, slot_in + 1, slot_out, requests, proposals, decisions)
     else
+      #IO.puts "=================================CANNOT PROPOSE - SLOT IN TOO LARGE"
       # stop proposing requests as it oustide window
       next(monitor, config, leaders, database_pid, window, slot_in, slot_out, [req | reqs], proposals, decisions)
     end
   end
 
   defp perform(monitor, config, leaders, database_pid, window, slot_in, slot_out, requests, proposals, decisions, command) do
-    cmd_matches = Enum.filter(Map.to_list(decisions), fn {s, {_, cmd}} -> cmd == command && s < slot_out end)
-    unless length(cmd_matches) > 0 do
+    unless Enum.any?(decisions, fn {s, {_, cmd}} -> cmd == command and s < slot_out end) do
       send database_pid, {:execute, elem(command,2)}
     end
     process_decision(monitor, config, leaders, database_pid, window, slot_in, slot_out + 1, requests, proposals, decisions)
