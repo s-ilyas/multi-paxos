@@ -81,7 +81,7 @@ defp next config, clock, requests, updates, transactions, scouts, commanders, co
       IO.puts "time = #{clock}    total seen = #{n_requests} max lag = #{n_requests-min_done}"
 
       sorted_commanders = commanders |> Map.to_list |> List.keysort(0)
-      sorted = for {s, n} <- sorted_commanders, do: {s, "#{:erlang.float_to_binary((commander_decisions[s] / n) * 100, [decimals: 2])}%"}
+      sorted = for {s, n} <- sorted_commanders, do: {s, elem(Float.parse(:erlang.float_to_binary((commander_decisions[s] / n) * 100, [decimals: 2])), 0)}
       IO.puts "time = #{clock}       CS Rate = #{inspect sorted}"
 
       sorted = scouts |> Map.to_list |> List.keysort(0)

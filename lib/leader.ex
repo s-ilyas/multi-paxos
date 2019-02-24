@@ -46,7 +46,7 @@ defmodule Leader do
           # proposed or sent for commit
           # hence increment to ballot number to the lowest possible number that can still be accepted by acceptors
           b_num = {sqn + 1, elem(b_num, 1)}
-          sleep_time = Enum.random(1..100)
+          sleep_time = Enum.random(1..Map.size(proposals))
           Process.sleep(sleep_time)
           s_pid = spawn(Scout, :start, [monitor, config, self(), acceptors, b_num])
           #IO.puts "Leader #{inspect(self())} one uped with #{inspect(b_num)} by creating #{inspect(s_pid)}"
