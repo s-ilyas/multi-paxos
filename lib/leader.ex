@@ -4,13 +4,12 @@ defmodule Leader do
       {:bind, acceptors, replicas} ->
         b_num = {0, config.server_num} # special case where we use SERVER_NUM instead of self()
         spawn(Scout, :start, [monitor, config, self(), acceptors, b_num])
-        send monitor, {:scout_spawned, config.server_num} #notify monitor
 
-        next(monitor, config, acceptors, replicas, b_num, false, Map.new(), 1)
+        next(monitor, config, acceptors, replicas, b_num, false, Map.new())
     end
   end
 
-  defp next(monitor, config, acceptors, replicas, b_num, active, proposals, sleep_time) do
+  defp next(monitor, config, acceptors, replicas, b_num, active, proposals) do
     receive do
       {:replica_propose, slot_num, cmd} ->
         unless Map.has_key?(proposals, slot_num) do
@@ -20,11 +19,10 @@ defmodule Leader do
             # if waiting for a commit to happen on b_num
             p_val = {b_num, slot_num, cmd}
             c_pid = spawn(Commander, :start, [monitor, config, self(), acceptors, replicas, p_val])
-            send monitor, {:commander_spawned, config.server_num} #notify monitor
           end
-          next(monitor, config, acceptors, replicas, b_num, active, proposals, sleep_time)
+          next(monitor, config, acceptors, replicas, b_num, active, proposals)
         else
-          next(monitor, config, acceptors, replicas, b_num, active, proposals, sleep_time)
+          next(monitor, config, acceptors, replicas, b_num, active, proposals)
         end
       {:scout_adopted, scout_b_num, pvals} ->
         if scout_b_num == b_num do
@@ -35,13 +33,12 @@ defmodule Leader do
             fn {s, c} ->
               p_val = {scout_b_num, s, c}
               spawn(Commander, :start, [monitor, config, self(), acceptors, replicas, p_val])
-              send monitor, {:commander_spawned, config.server_num}
               #notify monitor
             end
           )
-          next(monitor, config, acceptors, replicas, b_num, true, proposals, sleep_time)
+          next(monitor, config, acceptors, replicas, b_num, true, proposals)
         else
-          next(monitor, config, acceptors, replicas, b_num, false, proposals, sleep_time)
+          next(monitor, config, acceptors, replicas, b_num, false, proposals)
         end
       {:preempt_leader, {sqn, _} = preempt_b_num} ->
         if preempt_b_num > b_num do
@@ -49,16 +46,16 @@ defmodule Leader do
           # proposed or sent for commit
           # hence increment to ballot number to the lowest possible number that can still be accepted by acceptors
           b_num = {sqn + 1, elem(b_num, 1)}
+          sleep_time = Enum.random(1..100)
           Process.sleep(sleep_time)
           s_pid = spawn(Scout, :start, [monitor, config, self(), acceptors, b_num])
           #IO.puts "Leader #{inspect(self())} one uped with #{inspect(b_num)} by creating #{inspect(s_pid)}"
-          send monitor, {:scout_spawned, config.server_num} # notify monitor
 
-          next(monitor, config, acceptors, replicas, b_num, false, proposals, sleep_time * 2)
+          next(monitor, config, acceptors, replicas, b_num, false, proposals)
         else
-          next(monitor, config, acceptors, replicas, b_num, false, proposals, sleep_time)
+          next(monitor, config, acceptors, replicas, b_num, false, proposals)
         end
-      {:commander_success} -> next(monitor, config, acceptors, replicas, b_num, active, proposals, max(1, sleep_time - 5))
+      {:commander_success} -> next(monitor, config, acceptors, replicas, b_num, active, proposals)
     end
   end
 

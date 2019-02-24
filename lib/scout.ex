@@ -5,6 +5,7 @@
 
 defmodule Scout do
   def start(monitor, config, l_pid, acceptors, b_num) do
+    send monitor, {:scout_spawned, config.server_num}
     # send proposal of b_num to all acceptors
     for a_pid <- acceptors, do: send a_pid, {:scout_p1a, self(), b_num}
     next(monitor, config, l_pid, acceptors, b_num, MapSet.new(acceptors), MapSet.new())
