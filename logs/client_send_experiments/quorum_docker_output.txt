@@ -1,0 +1,401 @@
+[34mmultipaxos                |[0m time = 1000  updates done = [{1, 297}, {2, 297}, {3, 297}]
+[34mmultipaxos                |[0m time = 1000 requests seen = [{1, 199}, {2, 197}, {3, 198}]
+[34mmultipaxos                |[0m time = 1000    total seen = 594 max lag = 297
+[34mmultipaxos                |[0m time = 1000       CS Rate = [{1, 78.69}, {2, 47.89}, {3, 99.29}]
+[34mmultipaxos                |[0m time = 1000        scouts = [{1, 17}, {2, 10}, {3, 10}]
+[34mmultipaxos                |[0m time = 1000    commanders = [{1, 779}, {2, 1211}, {3, 1550}]
+[34mmultipaxos                |[0m 
+[34mmultipaxos                |[0m time = 2000  updates done = [{1, 632}, {2, 632}, {3, 632}]
+[34mmultipaxos                |[0m time = 2000 requests seen = [{1, 423}, {2, 421}, {3, 422}]
+[34mmultipaxos                |[0m time = 2000    total seen = 1266 max lag = 634
+[34mmultipaxos                |[0m time = 2000       CS Rate = [{1, 72.93}, {2, 75.48}, {3, 99.38}]
+[34mmultipaxos                |[0m time = 2000        scouts = [{1, 20}, {2, 12}, {3, 11}]
+[34mmultipaxos                |[0m time = 2000    commanders = [{1, 1810}, {2, 2586}, {3, 2271}]
+[34mmultipaxos                |[0m 
+[34mmultipaxos                |[0m time = 3000  updates done = [{1, 959}, {2, 959}, {3, 959}]
+[34mmultipaxos                |[0m time = 3000 requests seen = [{1, 644}, {2, 643}, {3, 642}]
+[34mmultipaxos                |[0m time = 3000    total seen = 1929 max lag = 970
+[34mmultipaxos                |[0m time = 3000       CS Rate = [{1, 82.08}, {2, 83.98}, {3, 99.53}]
+[34mmultipaxos                |[0m time = 3000        scouts = [{1, 21}, {2, 13}, {3, 13}]
+[34mmultipaxos                |[0m time = 3000    commanders = [{1, 2763}, {2, 3963}, {3, 3382}]
+[34mmultipaxos                |[0m 
+[34mmultipaxos                |[0m time = 4000  updates done = [{1, 1297}, {2, 1297}, {3, 1297}]
+[34mmultipaxos                |[0m time = 4000 requests seen = [{1, 866}, {2, 865}, {3, 865}]
+[34mmultipaxos                |[0m time = 4000    total seen = 2596 max lag = 1299
+[34mmultipaxos                |[0m time = 4000       CS Rate = [{1, 82.08}, {2, 88.84}, {3, 99.62}]
+[34mmultipaxos                |[0m time = 4000        scouts = [{1, 23}, {2, 14}, {3, 13}]
+[34mmultipaxos                |[0m time = 4000    commanders = [{1, 2763}, {2, 5689}, {3, 4947}]
+[34mmultipaxos                |[0m 
+[34mmultipaxos                |[0m time = 5000  updates done = [{1, 1602}, {2, 1602}, {3, 1602}]
+[34mmultipaxos                |[0m time = 5000 requests seen = [{1, 1084}, {2, 1083}, {3, 1081}]
+[34mmultipaxos                |[0m time = 5000    total seen = 3248 max lag = 1646
+[34mmultipaxos                |[0m time = 5000       CS Rate = [{1, 89.91}, {2, 89.33}, {3, 90.57}]
+[34mmultipaxos                |[0m time = 5000        scouts = [{1, 24}, {2, 15}, {3, 14}]
+[34mmultipaxos                |[0m time = 5000    commanders = [{1, 4918}, {2, 5960}, {3, 5441}]
+[34mmultipaxos                |[0m 
+[34mmultipaxos                |[0m time = 6000  updates done = [{1, 1957}, {2, 1957}, {3, 1956}]
+[34mmultipaxos                |[0m time = 6000 requests seen = [{1, 1305}, {2, 1304}, {3, 1305}]
+[34mmultipaxos                |[0m time = 6000    total seen = 3914 max lag = 1958
+[34mmultipaxos                |[0m time = 6000       CS Rate = [{1, 89.91}, {2, 92.61}, {3, 71.18}]
+[34mmultipaxos                |[0m time = 6000        scouts = [{1, 25}, {2, 15}, {3, 14}]
+[34mmultipaxos                |[0m time = 6000    commanders = [{1, 4918}, {2, 8611}, {3, 7123}]
+[34mmultipaxos                |[0m 
+[34mmultipaxos                |[0m time = 7000  updates done = [{1, 2285}, {2, 2284}, {3, 2284}]
+[34mmultipaxos                |[0m time = 7000 requests seen = [{1, 1526}, {2, 1524}, {3, 1524}]
+[34mmultipaxos                |[0m time = 7000    total seen = 4574 max lag = 2290
+[34mmultipaxos                |[0m time = 7000       CS Rate = [{1, 89.91}, {2, 94.59}, {3, 79.6}]
+[34mmultipaxos                |[0m time = 7000        scouts = [{1, 26}, {2, 16}, {3, 15}]
+[34mmultipaxos                |[0m time = 7000    commanders = [{1, 4918}, {2, 11820}, {3, 10075}]
+[34mmultipaxos                |[0m 
+[34mmultipaxos                |[0m time = 8000  updates done = [{1, 2620}, {2, 2620}, {3, 2620}]
+[34mmultipaxos                |[0m time = 8000 requests seen = [{1, 1747}, {2, 1746}, {3, 1747}]
+[34mmultipaxos                |[0m time = 8000    total seen = 5240 max lag = 2620
+[34mmultipaxos                |[0m time = 8000       CS Rate = [{1, 89.91}, {2, 94.58}, {3, 84.98}]
+[34mmultipaxos                |[0m time = 8000        scouts = [{1, 26}, {2, 16}, {3, 16}]
+[34mmultipaxos                |[0m time = 8000    commanders = [{1, 4918}, {2, 11851}, {3, 13681}]
+[34mmultipaxos                |[0m 
+[34mmultipaxos                |[0m time = 9000  updates done = [{1, 2953}, {2, 2953}, {3, 2953}]
+[34mmultipaxos                |[0m time = 9000 requests seen = [{1, 1969}, {2, 1968}, {3, 1969}]
+[34mmultipaxos                |[0m time = 9000    total seen = 5906 max lag = 2953
+[34mmultipaxos                |[0m time = 9000       CS Rate = [{1, 89.91}, {2, 94.58}, {3, 85.34}]
+[34mmultipaxos                |[0m time = 9000        scouts = [{1, 26}, {2, 16}, {3, 16}]
+[34mmultipaxos                |[0m time = 9000    commanders = [{1, 4918}, {2, 11851}, {3, 14017}]
+[34mmultipaxos                |[0m 
+[34mmultipaxos                |[0m time = 10000  updates done = [{1, 3285}, {2, 3285}, {3, 3285}]
+[34mmultipaxos                |[0m time = 10000 requests seen = [{1, 2191}, {2, 2189}, {3, 2190}]
+[34mmultipaxos                |[0m time = 10000    total seen = 6570 max lag = 3285
+[34mmultipaxos                |[0m time = 10000       CS Rate = [{1, 89.91}, {2, 96.07}, {3, 85.38}]
+[34mmultipaxos                |[0m time = 10000        scouts = [{1, 27}, {2, 17}, {3, 16}]
+[34mmultipaxos                |[0m time = 10000    commanders = [{1, 4918}, {2, 16343}, {3, 14081}]
+[34mmultipaxos                |[0m 
+[34mmultipaxos                |[0m time = 11000  updates done = [{1, 3615}, {2, 3615}, {3, 3615}]
+[34mmultipaxos                |[0m time = 11000 requests seen = [{1, 2411}, {2, 2409}, {3, 2410}]
+[34mmultipaxos                |[0m time = 11000    total seen = 7230 max lag = 3615
+[34mmultipaxos                |[0m time = 11000       CS Rate = [{1, 89.91}, {2, 96.18}, {3, 85.38}]
+[34mmultipaxos                |[0m time = 11000        scouts = [{1, 27}, {2, 17}, {3, 16}]
+[34mmultipaxos                |[0m time = 11000    commanders = [{1, 4918}, {2, 16790}, {3, 14081}]
+[34mmultipaxos                |[0m 
+[34mmultipaxos                |[0m time = 12000  updates done = [{1, 3944}, {2, 3944}, {3, 3944}]
+[34mmultipaxos                |[0m time = 12000 requests seen = [{1, 2633}, {2, 2631}, {3, 2629}]
+[34mmultipaxos                |[0m time = 12000    total seen = 7893 max lag = 3949
+[34mmultipaxos                |[0m time = 12000       CS Rate = [{1, 89.91}, {2, 96.23}, {3, 85.38}]
+[34mmultipaxos                |[0m time = 12000        scouts = [{1, 27}, {2, 17}, {3, 17}]
+[34mmultipaxos                |[0m time = 12000    commanders = [{1, 4918}, {2, 17122}, {3, 14081}]
+[34mmultipaxos                |[0m 
+[34mmultipaxos                |[0m time = 13000  updates done = [{1, 4276}, {2, 4276}, {3, 4263}]
+[34mmultipaxos                |[0m time = 13000 requests seen = [{1, 2855}, {2, 2853}, {3, 2843}]
+[34mmultipaxos                |[0m time = 13000    total seen = 8551 max lag = 4288
+[34mmultipaxos                |[0m time = 13000       CS Rate = [{1, 89.91}, {2, 96.22}, {3, 89.67}]
+[34mmultipaxos                |[0m time = 13000        scouts = [{1, 28}, {2, 17}, {3, 17}]
+[34mmultipaxos                |[0m time = 13000    commanders = [{1, 4918}, {2, 17124}, {3, 19940}]
+[34mmultipaxos                |[0m 
+[34mmultipaxos                |[0m time = 14000  updates done = [{1, 4614}, {2, 4613}, {3, 4613}]
+[34mmultipaxos                |[0m time = 14000 requests seen = [{1, 3076}, {2, 3076}, {3, 3076}]
+[34mmultipaxos                |[0m time = 14000    total seen = 9228 max lag = 4615
+[34mmultipaxos                |[0m time = 14000       CS Rate = [{1, 89.91}, {2, 96.22}, {3, 89.89}]
+[34mmultipaxos                |[0m time = 14000        scouts = [{1, 28}, {2, 17}, {3, 17}]
+[34mmultipaxos                |[0m time = 14000    commanders = [{1, 4918}, {2, 17124}, {3, 20353}]
+[34mmultipaxos                |[0m 
+[34mmultipaxos                |[0m time = 15000  updates done = [{1, 4947}, {2, 4947}, {3, 4947}]
+[34mmultipaxos                |[0m time = 15000 requests seen = [{1, 3299}, {2, 3297}, {3, 3298}]
+[34mmultipaxos                |[0m time = 15000    total seen = 9894 max lag = 4947
+[34mmultipaxos                |[0m time = 15000       CS Rate = [{1, 89.91}, {2, 96.22}, {3, 90.05}]
+[34mmultipaxos                |[0m time = 15000        scouts = [{1, 28}, {2, 17}, {3, 17}]
+[34mmultipaxos                |[0m time = 15000    commanders = [{1, 4918}, {2, 17124}, {3, 20686}]
+[34mmultipaxos                |[0m 
+[34mmultipaxos                |[0m time = 16000  updates done = [{1, 5185}, {2, 5162}, {3, 5207}]
+[34mmultipaxos                |[0m time = 16000 requests seen = [{1, 3492}, {2, 3477}, {3, 3500}]
+[34mmultipaxos                |[0m time = 16000    total seen = 10469 max lag = 5307
+[34mmultipaxos                |[0m time = 16000       CS Rate = [{1, 89.91}, {2, 97.32}, {3, 90.06}]
+[34mmultipaxos                |[0m time = 16000        scouts = [{1, 28}, {2, 18}, {3, 17}]
+[34mmultipaxos                |[0m time = 16000    commanders = [{1, 4918}, {2, 24109}, {3, 20751}]
+[34mmultipaxos                |[0m 
+[34mmultipaxos                |[0m time = 17000  updates done = [{1, 5457}, {2, 5457}, {3, 5457}]
+[34mmultipaxos                |[0m time = 17000 requests seen = [{1, 3740}, {2, 3740}, {3, 3725}]
+[34mmultipaxos                |[0m time = 17000    total seen = 11205 max lag = 5748
+[34mmultipaxos                |[0m time = 17000       CS Rate = [{1, 89.91}, {2, 97.32}, {3, 72.53}]
+[34mmultipaxos                |[0m time = 17000        scouts = [{1, 28}, {2, 18}, {3, 18}]
+[34mmultipaxos                |[0m time = 17000    commanders = [{1, 4918}, {2, 24476}, {3, 25876}]
+[34mmultipaxos                |[0m 
+[34mmultipaxos                |[0m time = 18000  updates done = [{1, 5744}, {2, 5772}, {3, 5802}]
+[34mmultipaxos                |[0m time = 18000 requests seen = [{1, 3907}, {2, 3921}, {3, 3944}]
+[34mmultipaxos                |[0m time = 18000    total seen = 11772 max lag = 6028
+[34mmultipaxos                |[0m time = 18000       CS Rate = [{1, 89.91}, {2, 97.32}, {3, 92.81}]
+[34mmultipaxos                |[0m time = 18000        scouts = [{1, 29}, {2, 18}, {3, 18}]
+[34mmultipaxos                |[0m time = 18000    commanders = [{1, 4918}, {2, 24476}, {3, 28718}]
+[34mmultipaxos                |[0m 
+[34mmultipaxos                |[0m time = 19000  updates done = [{1, 6047}, {2, 6047}, {3, 6047}]
+[34mmultipaxos                |[0m time = 19000 requests seen = [{1, 4177}, {2, 4172}, {3, 4178}]
+[34mmultipaxos                |[0m time = 19000    total seen = 12527 max lag = 6480
+[34mmultipaxos                |[0m time = 19000       CS Rate = [{1, 89.91}, {2, 86.94}, {3, 92.88}]
+[34mmultipaxos                |[0m time = 19000        scouts = [{1, 29}, {2, 19}, {3, 18}]
+[34mmultipaxos                |[0m time = 19000    commanders = [{1, 4918}, {2, 27459}, {3, 29021}]
+[34mmultipaxos                |[0m 
+[34mmultipaxos                |[0m time = 20000  updates done = [{1, 6193}, {2, 6193}, {3, 6193}]
+[34mmultipaxos                |[0m time = 20000 requests seen = [{1, 4396}, {2, 4391}, {3, 4335}]
+[34mmultipaxos                |[0m time = 20000    total seen = 13122 max lag = 6929
+[34mmultipaxos                |[0m time = 20000       CS Rate = [{1, 89.91}, {2, 97.96}, {3, 92.88}]
+[34mmultipaxos                |[0m time = 20000        scouts = [{1, 31}, {2, 20}, {3, 18}]
+[34mmultipaxos                |[0m time = 20000    commanders = [{1, 4918}, {2, 33134}, {3, 29021}]
+[34mmultipaxos                |[0m 
+[34mmultipaxos                |[0m   Client 1 going to sleep, sent = 3301
+[34mmultipaxos                |[0m   Client 2 going to sleep, sent = 3316
+[34mmultipaxos                |[0m time = 21000  updates done = [{1, 6311}, {2, 6309}, {3, 6290}]
+[34mmultipaxos                |[0m time = 21000 requests seen = [{1, 4412}, {2, 4410}, {3, 4412}]
+[34mmultipaxos                |[0m time = 21000    total seen = 13234 max lag = 6944
+[34mmultipaxos                |[0m time = 21000       CS Rate = [{1, 32.38}, {2, 98.39}, {3, 92.88}]
+[34mmultipaxos                |[0m time = 21000        scouts = [{1, 31}, {2, 20}, {3, 18}]
+[34mmultipaxos                |[0m time = 21000    commanders = [{1, 13657}, {2, 42018}, {3, 29021}]
+[34mmultipaxos                |[0m 
+[34mmultipaxos                |[0m time = 22000  updates done = [{1, 6365}, {2, 6365}, {3, 6365}]
+[34mmultipaxos                |[0m time = 22000 requests seen = [{1, 4412}, {2, 4410}, {3, 4412}]
+[34mmultipaxos                |[0m time = 22000    total seen = 13234 max lag = 6869
+[34mmultipaxos                |[0m time = 22000       CS Rate = [{1, 45.62}, {2, 98.38}, {3, 92.88}]
+[34mmultipaxos                |[0m time = 22000        scouts = [{1, 32}, {2, 20}, {3, 20}]
+[34mmultipaxos                |[0m time = 22000    commanders = [{1, 22716}, {2, 42101}, {3, 29021}]
+[34mmultipaxos                |[0m 
+[34mmultipaxos                |[0m time = 23000  updates done = [{1, 6382}, {2, 6382}, {3, 6382}]
+[34mmultipaxos                |[0m time = 23000 requests seen = [{1, 4412}, {2, 4410}, {3, 4412}]
+[34mmultipaxos                |[0m time = 23000    total seen = 13234 max lag = 6852
+[34mmultipaxos                |[0m time = 23000       CS Rate = [{1, 45.62}, {2, 98.38}, {3, 94.32}]
+[34mmultipaxos                |[0m time = 23000        scouts = [{1, 33}, {2, 20}, {3, 20}]
+[34mmultipaxos                |[0m time = 23000    commanders = [{1, 22716}, {2, 42101}, {3, 38180}]
+[34mmultipaxos                |[0m 
+[34mmultipaxos                |[0m time = 24000  updates done = [{1, 6517}, {2, 6516}, {3, 6541}]
+[34mmultipaxos                |[0m time = 24000 requests seen = [{1, 4412}, {2, 4410}, {3, 4412}]
+[34mmultipaxos                |[0m time = 24000    total seen = 13234 max lag = 6718
+[34mmultipaxos                |[0m time = 24000       CS Rate = [{1, 61.52}, {2, 98.38}, {3, 94.32}]
+[34mmultipaxos                |[0m time = 24000        scouts = [{1, 33}, {2, 20}, {3, 20}]
+[34mmultipaxos                |[0m time = 24000    commanders = [{1, 32108}, {2, 42101}, {3, 38180}]
+[34mmultipaxos                |[0m 
+[34mmultipaxos                |[0m time = 25000  updates done = [{1, 6617}, {2, 6617}, {3, 6617}]
+[34mmultipaxos                |[0m time = 25000 requests seen = [{1, 4412}, {2, 4410}, {3, 4412}]
+[34mmultipaxos                |[0m time = 25000    total seen = 13234 max lag = 6617
+[34mmultipaxos                |[0m time = 25000       CS Rate = [{1, 62.05}, {2, 98.38}, {3, 94.32}]
+[34mmultipaxos                |[0m time = 25000        scouts = [{1, 33}, {2, 20}, {3, 20}]
+[34mmultipaxos                |[0m time = 25000    commanders = [{1, 32556}, {2, 42101}, {3, 38180}]
+[34mmultipaxos                |[0m 
+[34mmultipaxos                |[0m time = 26000  updates done = [{1, 6617}, {2, 6617}, {3, 6617}]
+[34mmultipaxos                |[0m time = 26000 requests seen = [{1, 4412}, {2, 4410}, {3, 4412}]
+[34mmultipaxos                |[0m time = 26000    total seen = 13234 max lag = 6617
+[34mmultipaxos                |[0m time = 26000       CS Rate = [{1, 62.05}, {2, 98.38}, {3, 94.32}]
+[34mmultipaxos                |[0m time = 26000        scouts = [{1, 33}, {2, 20}, {3, 20}]
+[34mmultipaxos                |[0m time = 26000    commanders = [{1, 32556}, {2, 42101}, {3, 38180}]
+[34mmultipaxos                |[0m 
+[34mmultipaxos                |[0m time = 27000  updates done = [{1, 6617}, {2, 6617}, {3, 6617}]
+[34mmultipaxos                |[0m time = 27000 requests seen = [{1, 4412}, {2, 4410}, {3, 4412}]
+[34mmultipaxos                |[0m time = 27000    total seen = 13234 max lag = 6617
+[34mmultipaxos                |[0m time = 27000       CS Rate = [{1, 62.05}, {2, 98.38}, {3, 94.32}]
+[34mmultipaxos                |[0m time = 27000        scouts = [{1, 33}, {2, 20}, {3, 20}]
+[34mmultipaxos                |[0m time = 27000    commanders = [{1, 32556}, {2, 42101}, {3, 38180}]
+[34mmultipaxos                |[0m 
+[34mmultipaxos                |[0m time = 28000  updates done = [{1, 6617}, {2, 6617}, {3, 6617}]
+[34mmultipaxos                |[0m time = 28000 requests seen = [{1, 4412}, {2, 4410}, {3, 4412}]
+[34mmultipaxos                |[0m time = 28000    total seen = 13234 max lag = 6617
+[34mmultipaxos                |[0m time = 28000       CS Rate = [{1, 62.05}, {2, 98.38}, {3, 94.32}]
+[34mmultipaxos                |[0m time = 28000        scouts = [{1, 33}, {2, 20}, {3, 20}]
+[34mmultipaxos                |[0m time = 28000    commanders = [{1, 32556}, {2, 42101}, {3, 38180}]
+[34mmultipaxos                |[0m 
+[34mmultipaxos                |[0m time = 29000  updates done = [{1, 6617}, {2, 6617}, {3, 6617}]
+[34mmultipaxos                |[0m time = 29000 requests seen = [{1, 4412}, {2, 4410}, {3, 4412}]
+[34mmultipaxos                |[0m time = 29000    total seen = 13234 max lag = 6617
+[34mmultipaxos                |[0m time = 29000       CS Rate = [{1, 62.05}, {2, 98.38}, {3, 94.32}]
+[34mmultipaxos                |[0m time = 29000        scouts = [{1, 33}, {2, 21}, {3, 20}]
+[34mmultipaxos                |[0m time = 29000    commanders = [{1, 32556}, {2, 42101}, {3, 38180}]
+[34mmultipaxos                |[0m 
+[34mmultipaxos                |[0m time = 30000  updates done = [{1, 6617}, {2, 6617}, {3, 6617}]
+[34mmultipaxos                |[0m time = 30000 requests seen = [{1, 4412}, {2, 4410}, {3, 4412}]
+[34mmultipaxos                |[0m time = 30000    total seen = 13234 max lag = 6617
+[34mmultipaxos                |[0m time = 30000       CS Rate = [{1, 62.05}, {2, 98.69}, {3, 94.32}]
+[34mmultipaxos                |[0m time = 30000        scouts = [{1, 33}, {2, 21}, {3, 20}]
+[34mmultipaxos                |[0m time = 30000    commanders = [{1, 32556}, {2, 51941}, {3, 38180}]
+[34mmultipaxos                |[0m 
+[34mmultipaxos                |[0m time = 31000  updates done = [{1, 6617}, {2, 6617}, {3, 6617}]
+[34mmultipaxos                |[0m time = 31000 requests seen = [{1, 4412}, {2, 4410}, {3, 4412}]
+[34mmultipaxos                |[0m time = 31000    total seen = 13234 max lag = 6617
+[34mmultipaxos                |[0m time = 31000       CS Rate = [{1, 62.05}, {2, 98.69}, {3, 94.32}]
+[34mmultipaxos                |[0m time = 31000        scouts = [{1, 33}, {2, 21}, {3, 20}]
+[34mmultipaxos                |[0m time = 31000    commanders = [{1, 32556}, {2, 51941}, {3, 38180}]
+[34mmultipaxos                |[0m 
+[34mmultipaxos                |[0m time = 32000  updates done = [{1, 6617}, {2, 6617}, {3, 6617}]
+[34mmultipaxos                |[0m time = 32000 requests seen = [{1, 4412}, {2, 4410}, {3, 4412}]
+[34mmultipaxos                |[0m time = 32000    total seen = 13234 max lag = 6617
+[34mmultipaxos                |[0m time = 32000       CS Rate = [{1, 62.05}, {2, 98.69}, {3, 94.32}]
+[34mmultipaxos                |[0m time = 32000        scouts = [{1, 33}, {2, 21}, {3, 21}]
+[34mmultipaxos                |[0m time = 32000    commanders = [{1, 32556}, {2, 51941}, {3, 38180}]
+[34mmultipaxos                |[0m 
+[34mmultipaxos                |[0m time = 33000  updates done = [{1, 6617}, {2, 6617}, {3, 6617}]
+[34mmultipaxos                |[0m time = 33000 requests seen = [{1, 4412}, {2, 4410}, {3, 4412}]
+[34mmultipaxos                |[0m time = 33000    total seen = 13234 max lag = 6617
+[34mmultipaxos                |[0m time = 33000       CS Rate = [{1, 62.05}, {2, 98.69}, {3, 95.49}]
+[34mmultipaxos                |[0m time = 33000        scouts = [{1, 33}, {2, 21}, {3, 21}]
+[34mmultipaxos                |[0m time = 33000    commanders = [{1, 32556}, {2, 51941}, {3, 48020}]
+[34mmultipaxos                |[0m 
+[34mmultipaxos                |[0m time = 34000  updates done = [{1, 6617}, {2, 6617}, {3, 6617}]
+[34mmultipaxos                |[0m time = 34000 requests seen = [{1, 4412}, {2, 4410}, {3, 4412}]
+[34mmultipaxos                |[0m time = 34000    total seen = 13234 max lag = 6617
+[34mmultipaxos                |[0m time = 34000       CS Rate = [{1, 62.05}, {2, 98.69}, {3, 95.49}]
+[34mmultipaxos                |[0m time = 34000        scouts = [{1, 33}, {2, 21}, {3, 21}]
+[34mmultipaxos                |[0m time = 34000    commanders = [{1, 32556}, {2, 51941}, {3, 48020}]
+[34mmultipaxos                |[0m 
+[34mmultipaxos                |[0m time = 35000  updates done = [{1, 6617}, {2, 6617}, {3, 6617}]
+[34mmultipaxos                |[0m time = 35000 requests seen = [{1, 4412}, {2, 4410}, {3, 4412}]
+[34mmultipaxos                |[0m time = 35000    total seen = 13234 max lag = 6617
+[34mmultipaxos                |[0m time = 35000       CS Rate = [{1, 62.05}, {2, 98.69}, {3, 95.49}]
+[34mmultipaxos                |[0m time = 35000        scouts = [{1, 33}, {2, 21}, {3, 21}]
+[34mmultipaxos                |[0m time = 35000    commanders = [{1, 32556}, {2, 51941}, {3, 48020}]
+[34mmultipaxos                |[0m 
+[34mmultipaxos                |[0m time = 36000  updates done = [{1, 6617}, {2, 6617}, {3, 6617}]
+[34mmultipaxos                |[0m time = 36000 requests seen = [{1, 4412}, {2, 4410}, {3, 4412}]
+[34mmultipaxos                |[0m time = 36000    total seen = 13234 max lag = 6617
+[34mmultipaxos                |[0m time = 36000       CS Rate = [{1, 62.05}, {2, 98.69}, {3, 95.49}]
+[34mmultipaxos                |[0m time = 36000        scouts = [{1, 33}, {2, 21}, {3, 21}]
+[34mmultipaxos                |[0m time = 36000    commanders = [{1, 32556}, {2, 51941}, {3, 48020}]
+[34mmultipaxos                |[0m 
+[34mmultipaxos                |[0m time = 37000  updates done = [{1, 6617}, {2, 6617}, {3, 6617}]
+[34mmultipaxos                |[0m time = 37000 requests seen = [{1, 4412}, {2, 4410}, {3, 4412}]
+[34mmultipaxos                |[0m time = 37000    total seen = 13234 max lag = 6617
+[34mmultipaxos                |[0m time = 37000       CS Rate = [{1, 62.05}, {2, 98.69}, {3, 95.49}]
+[34mmultipaxos                |[0m time = 37000        scouts = [{1, 33}, {2, 21}, {3, 21}]
+[34mmultipaxos                |[0m time = 37000    commanders = [{1, 32556}, {2, 51941}, {3, 48020}]
+[34mmultipaxos                |[0m 
+[34mmultipaxos                |[0m time = 38000  updates done = [{1, 6617}, {2, 6617}, {3, 6617}]
+[34mmultipaxos                |[0m time = 38000 requests seen = [{1, 4412}, {2, 4410}, {3, 4412}]
+[34mmultipaxos                |[0m time = 38000    total seen = 13234 max lag = 6617
+[34mmultipaxos                |[0m time = 38000       CS Rate = [{1, 62.05}, {2, 98.69}, {3, 95.49}]
+[34mmultipaxos                |[0m time = 38000        scouts = [{1, 33}, {2, 21}, {3, 21}]
+[34mmultipaxos                |[0m time = 38000    commanders = [{1, 32556}, {2, 51941}, {3, 48020}]
+[34mmultipaxos                |[0m 
+[34mmultipaxos                |[0m time = 39000  updates done = [{1, 6617}, {2, 6617}, {3, 6617}]
+[34mmultipaxos                |[0m time = 39000 requests seen = [{1, 4412}, {2, 4410}, {3, 4412}]
+[34mmultipaxos                |[0m time = 39000    total seen = 13234 max lag = 6617
+[34mmultipaxos                |[0m time = 39000       CS Rate = [{1, 62.05}, {2, 98.69}, {3, 95.49}]
+[34mmultipaxos                |[0m time = 39000        scouts = [{1, 33}, {2, 21}, {3, 21}]
+[34mmultipaxos                |[0m time = 39000    commanders = [{1, 32556}, {2, 51941}, {3, 48020}]
+[34mmultipaxos                |[0m 
+[34mmultipaxos                |[0m time = 40000  updates done = [{1, 6617}, {2, 6617}, {3, 6617}]
+[34mmultipaxos                |[0m time = 40000 requests seen = [{1, 4412}, {2, 4410}, {3, 4412}]
+[34mmultipaxos                |[0m time = 40000    total seen = 13234 max lag = 6617
+[34mmultipaxos                |[0m time = 40000       CS Rate = [{1, 62.05}, {2, 98.69}, {3, 95.49}]
+[34mmultipaxos                |[0m time = 40000        scouts = [{1, 33}, {2, 21}, {3, 21}]
+[34mmultipaxos                |[0m time = 40000    commanders = [{1, 32556}, {2, 51941}, {3, 48020}]
+[34mmultipaxos                |[0m 
+[34mmultipaxos                |[0m time = 41000  updates done = [{1, 6617}, {2, 6617}, {3, 6617}]
+[34mmultipaxos                |[0m time = 41000 requests seen = [{1, 4412}, {2, 4410}, {3, 4412}]
+[34mmultipaxos                |[0m time = 41000    total seen = 13234 max lag = 6617
+[34mmultipaxos                |[0m time = 41000       CS Rate = [{1, 62.05}, {2, 98.69}, {3, 95.49}]
+[34mmultipaxos                |[0m time = 41000        scouts = [{1, 33}, {2, 21}, {3, 21}]
+[34mmultipaxos                |[0m time = 41000    commanders = [{1, 32556}, {2, 51941}, {3, 48020}]
+[34mmultipaxos                |[0m 
+[34mmultipaxos                |[0m time = 42000  updates done = [{1, 6617}, {2, 6617}, {3, 6617}]
+[34mmultipaxos                |[0m time = 42000 requests seen = [{1, 4412}, {2, 4410}, {3, 4412}]
+[34mmultipaxos                |[0m time = 42000    total seen = 13234 max lag = 6617
+[34mmultipaxos                |[0m time = 42000       CS Rate = [{1, 62.05}, {2, 98.69}, {3, 95.49}]
+[34mmultipaxos                |[0m time = 42000        scouts = [{1, 33}, {2, 21}, {3, 21}]
+[34mmultipaxos                |[0m time = 42000    commanders = [{1, 32556}, {2, 51941}, {3, 48020}]
+[34mmultipaxos                |[0m 
+[34mmultipaxos                |[0m time = 43000  updates done = [{1, 6617}, {2, 6617}, {3, 6617}]
+[34mmultipaxos                |[0m time = 43000 requests seen = [{1, 4412}, {2, 4410}, {3, 4412}]
+[34mmultipaxos                |[0m time = 43000    total seen = 13234 max lag = 6617
+[34mmultipaxos                |[0m time = 43000       CS Rate = [{1, 62.05}, {2, 98.69}, {3, 95.49}]
+[34mmultipaxos                |[0m time = 43000        scouts = [{1, 33}, {2, 21}, {3, 21}]
+[34mmultipaxos                |[0m time = 43000    commanders = [{1, 32556}, {2, 51941}, {3, 48020}]
+[34mmultipaxos                |[0m 
+[34mmultipaxos                |[0m time = 44000  updates done = [{1, 6617}, {2, 6617}, {3, 6617}]
+[34mmultipaxos                |[0m time = 44000 requests seen = [{1, 4412}, {2, 4410}, {3, 4412}]
+[34mmultipaxos                |[0m time = 44000    total seen = 13234 max lag = 6617
+[34mmultipaxos                |[0m time = 44000       CS Rate = [{1, 62.05}, {2, 98.69}, {3, 95.49}]
+[34mmultipaxos                |[0m time = 44000        scouts = [{1, 33}, {2, 21}, {3, 21}]
+[34mmultipaxos                |[0m time = 44000    commanders = [{1, 32556}, {2, 51941}, {3, 48020}]
+[34mmultipaxos                |[0m 
+[34mmultipaxos                |[0m time = 45000  updates done = [{1, 6617}, {2, 6617}, {3, 6617}]
+[34mmultipaxos                |[0m time = 45000 requests seen = [{1, 4412}, {2, 4410}, {3, 4412}]
+[34mmultipaxos                |[0m time = 45000    total seen = 13234 max lag = 6617
+[34mmultipaxos                |[0m time = 45000       CS Rate = [{1, 62.05}, {2, 98.69}, {3, 95.49}]
+[34mmultipaxos                |[0m time = 45000        scouts = [{1, 33}, {2, 21}, {3, 21}]
+[34mmultipaxos                |[0m time = 45000    commanders = [{1, 32556}, {2, 51941}, {3, 48020}]
+[34mmultipaxos                |[0m 
+[34mmultipaxos                |[0m time = 46000  updates done = [{1, 6617}, {2, 6617}, {3, 6617}]
+[34mmultipaxos                |[0m time = 46000 requests seen = [{1, 4412}, {2, 4410}, {3, 4412}]
+[34mmultipaxos                |[0m time = 46000    total seen = 13234 max lag = 6617
+[34mmultipaxos                |[0m time = 46000       CS Rate = [{1, 62.05}, {2, 98.69}, {3, 95.49}]
+[34mmultipaxos                |[0m time = 46000        scouts = [{1, 33}, {2, 21}, {3, 21}]
+[34mmultipaxos                |[0m time = 46000    commanders = [{1, 32556}, {2, 51941}, {3, 48020}]
+[34mmultipaxos                |[0m 
+[34mmultipaxos                |[0m time = 47000  updates done = [{1, 6617}, {2, 6617}, {3, 6617}]
+[34mmultipaxos                |[0m time = 47000 requests seen = [{1, 4412}, {2, 4410}, {3, 4412}]
+[34mmultipaxos                |[0m time = 47000    total seen = 13234 max lag = 6617
+[34mmultipaxos                |[0m time = 47000       CS Rate = [{1, 62.05}, {2, 98.69}, {3, 95.49}]
+[34mmultipaxos                |[0m time = 47000        scouts = [{1, 33}, {2, 21}, {3, 21}]
+[34mmultipaxos                |[0m time = 47000    commanders = [{1, 32556}, {2, 51941}, {3, 48020}]
+[34mmultipaxos                |[0m 
+[34mmultipaxos                |[0m time = 48000  updates done = [{1, 6617}, {2, 6617}, {3, 6617}]
+[34mmultipaxos                |[0m time = 48000 requests seen = [{1, 4412}, {2, 4410}, {3, 4412}]
+[34mmultipaxos                |[0m time = 48000    total seen = 13234 max lag = 6617
+[34mmultipaxos                |[0m time = 48000       CS Rate = [{1, 62.05}, {2, 98.69}, {3, 95.49}]
+[34mmultipaxos                |[0m time = 48000        scouts = [{1, 33}, {2, 21}, {3, 21}]
+[34mmultipaxos                |[0m time = 48000    commanders = [{1, 32556}, {2, 51941}, {3, 48020}]
+[34mmultipaxos                |[0m 
+[34mmultipaxos                |[0m time = 49000  updates done = [{1, 6617}, {2, 6617}, {3, 6617}]
+[34mmultipaxos                |[0m time = 49000 requests seen = [{1, 4412}, {2, 4410}, {3, 4412}]
+[34mmultipaxos                |[0m time = 49000    total seen = 13234 max lag = 6617
+[34mmultipaxos                |[0m time = 49000       CS Rate = [{1, 62.05}, {2, 98.69}, {3, 95.49}]
+[34mmultipaxos                |[0m time = 49000        scouts = [{1, 33}, {2, 21}, {3, 21}]
+[34mmultipaxos                |[0m time = 49000    commanders = [{1, 32556}, {2, 51941}, {3, 48020}]
+[34mmultipaxos                |[0m 
+[34mmultipaxos                |[0m time = 50000  updates done = [{1, 6617}, {2, 6617}, {3, 6617}]
+[34mmultipaxos                |[0m time = 50000 requests seen = [{1, 4412}, {2, 4410}, {3, 4412}]
+[34mmultipaxos                |[0m time = 50000    total seen = 13234 max lag = 6617
+[34mmultipaxos                |[0m time = 50000       CS Rate = [{1, 62.05}, {2, 98.69}, {3, 95.49}]
+[34mmultipaxos                |[0m time = 50000        scouts = [{1, 33}, {2, 21}, {3, 21}]
+[34mmultipaxos                |[0m time = 50000    commanders = [{1, 32556}, {2, 51941}, {3, 48020}]
+[34mmultipaxos                |[0m 
+[34mmultipaxos                |[0m time = 51000  updates done = [{1, 6617}, {2, 6617}, {3, 6617}]
+[34mmultipaxos                |[0m time = 51000 requests seen = [{1, 4412}, {2, 4410}, {3, 4412}]
+[34mmultipaxos                |[0m time = 51000    total seen = 13234 max lag = 6617
+[34mmultipaxos                |[0m time = 51000       CS Rate = [{1, 62.05}, {2, 98.69}, {3, 95.49}]
+[34mmultipaxos                |[0m time = 51000        scouts = [{1, 33}, {2, 21}, {3, 21}]
+[34mmultipaxos                |[0m time = 51000    commanders = [{1, 32556}, {2, 51941}, {3, 48020}]
+[34mmultipaxos                |[0m 
+[34mmultipaxos                |[0m time = 52000  updates done = [{1, 6617}, {2, 6617}, {3, 6617}]
+[34mmultipaxos                |[0m time = 52000 requests seen = [{1, 4412}, {2, 4410}, {3, 4412}]
+[34mmultipaxos                |[0m time = 52000    total seen = 13234 max lag = 6617
+[34mmultipaxos                |[0m time = 52000       CS Rate = [{1, 62.05}, {2, 98.69}, {3, 95.49}]
+[34mmultipaxos                |[0m time = 52000        scouts = [{1, 33}, {2, 21}, {3, 21}]
+[34mmultipaxos                |[0m time = 52000    commanders = [{1, 32556}, {2, 51941}, {3, 48020}]
+[34mmultipaxos                |[0m 
+[34mmultipaxos                |[0m time = 53000  updates done = [{1, 6617}, {2, 6617}, {3, 6617}]
+[34mmultipaxos                |[0m time = 53000 requests seen = [{1, 4412}, {2, 4410}, {3, 4412}]
+[34mmultipaxos                |[0m time = 53000    total seen = 13234 max lag = 6617
+[34mmultipaxos                |[0m time = 53000       CS Rate = [{1, 62.05}, {2, 98.69}, {3, 95.49}]
+[34mmultipaxos                |[0m time = 53000        scouts = [{1, 33}, {2, 21}, {3, 21}]
+[34mmultipaxos                |[0m time = 53000    commanders = [{1, 32556}, {2, 51941}, {3, 48020}]
+[34mmultipaxos                |[0m 
+[34mmultipaxos                |[0m time = 54000  updates done = [{1, 6617}, {2, 6617}, {3, 6617}]
+[34mmultipaxos                |[0m time = 54000 requests seen = [{1, 4412}, {2, 4410}, {3, 4412}]
+[34mmultipaxos                |[0m time = 54000    total seen = 13234 max lag = 6617
+[34mmultipaxos                |[0m time = 54000       CS Rate = [{1, 62.05}, {2, 98.69}, {3, 95.49}]
+[34mmultipaxos                |[0m time = 54000        scouts = [{1, 33}, {2, 21}, {3, 21}]
+[34mmultipaxos                |[0m time = 54000    commanders = [{1, 32556}, {2, 51941}, {3, 48020}]
+[34mmultipaxos                |[0m 
+[34mmultipaxos                |[0m time = 55000  updates done = [{1, 6617}, {2, 6617}, {3, 6617}]
+[34mmultipaxos                |[0m time = 55000 requests seen = [{1, 4412}, {2, 4410}, {3, 4412}]
+[34mmultipaxos                |[0m time = 55000    total seen = 13234 max lag = 6617
+[34mmultipaxos                |[0m time = 55000       CS Rate = [{1, 62.05}, {2, 98.69}, {3, 95.49}]
+[34mmultipaxos                |[0m time = 55000        scouts = [{1, 33}, {2, 21}, {3, 21}]
+[34mmultipaxos                |[0m time = 55000    commanders = [{1, 32556}, {2, 51941}, {3, 48020}]
+[34mmultipaxos                |[0m 
+[34mmultipaxos                |[0m time = 56000  updates done = [{1, 6617}, {2, 6617}, {3, 6617}]
+[34mmultipaxos                |[0m time = 56000 requests seen = [{1, 4412}, {2, 4410}, {3, 4412}]
+[34mmultipaxos                |[0m time = 56000    total seen = 13234 max lag = 6617
+[34mmultipaxos                |[0m time = 56000       CS Rate = [{1, 62.05}, {2, 98.69}, {3, 95.49}]
+[34mmultipaxos                |[0m time = 56000        scouts = [{1, 33}, {2, 21}, {3, 21}]
+[34mmultipaxos                |[0m time = 56000    commanders = [{1, 32556}, {2, 51941}, {3, 48020}]
+[34mmultipaxos                |[0m 
+[34mmultipaxos                |[0m time = 57000  updates done = [{1, 6617}, {2, 6617}, {3, 6617}]
+[34mmultipaxos                |[0m time = 57000 requests seen = [{1, 4412}, {2, 4410}, {3, 4412}]
+[34mmultipaxos                |[0m time = 57000    total seen = 13234 max lag = 6617
+[34mmultipaxos                |[0m time = 57000       CS Rate = [{1, 62.05}, {2, 98.69}, {3, 95.49}]
+[34mmultipaxos                |[0m time = 57000        scouts = [{1, 33}, {2, 21}, {3, 21}]
+[34mmultipaxos                |[0m time = 57000    commanders = [{1, 32556}, {2, 51941}, {3, 48020}]
+[34mmultipaxos                |[0m 

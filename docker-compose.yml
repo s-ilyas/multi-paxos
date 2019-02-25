@@ -24,14 +24,13 @@ services:
     container_name: multipaxos
     command: > 
       elixir --name multipaxos@multipaxos.localdomain --cookie pass 
-             -S mix run --no-halt -e Multipaxos.main default docker 3 3 
+             -S mix run --no-halt -e Multipaxos.main default docker 3 2 
     depends_on:
       - server1.localdomain
       - server2.localdomain
       - server3.localdomain
       - client1.localdomain
       - client2.localdomain
-      - client3.localdomain
     <<: *defaults
 
   server1.localdomain:
@@ -66,13 +65,6 @@ services:
     container_name: client2
     command: > 
       elixir --name client2@client2.localdomain --cookie pass 
-             -S mix run --no-halt 
-    <<: *defaults
-
-  client3.localdomain:
-    container_name: client3
-    command: > 
-      elixir --name client3@client3.localdomain --cookie pass 
              -S mix run --no-halt 
     <<: *defaults
 

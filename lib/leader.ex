@@ -1,3 +1,5 @@
+# Ilyas Saltykov (is916) and Shashwat Dalal (spd16)
+
 defmodule Leader do
   def start(config, monitor) do
     receive do
