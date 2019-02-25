@@ -24,7 +24,7 @@ defmodule Replica do
       # decisions contain command at slot_out
       if Map.has_key?(proposals, slot_out) do
         # proposal also contain command at slot_out so update proposals and requests accordingly
-        {{_, proposal_cmd}, proposals} = Map.pop(proposals, slot_out)
+        {{_, proposal_cmd}proposals} = Map.pop(proposals, slot_out)
         requests =
           case decision_cmd == proposal_cmd do
             true -> requests

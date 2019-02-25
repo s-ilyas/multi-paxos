@@ -6,6 +6,7 @@
 defmodule Commander do
 
   def start(monitor, config, l_pid, acceptors, replicas, pval) do
+    send monitor, {:commander_spawned, config.server_num}
     # send commit request of pval = {b_num, slot_num, cmd} to all acceptors
     for a <- acceptors, do: send a, {:commander_p2a, self(), pval}
     next(monitor, config, l_pid, acceptors, replicas, MapSet.new(acceptors), pval)
@@ -22,6 +23,8 @@ defmodule Commander do
             for r_pid <- replicas, do: send r_pid, {:commander_decision, slot_num, cmd}
             # tell leader commander succeeded
             send l_pid, {:commander_success}
+            # add to monitor decisions tally
+            send monitor, {:commander_success, config.server_num}
             # kill node
             exit(monitor, config)
           end

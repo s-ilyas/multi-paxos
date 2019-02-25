@@ -11,7 +11,7 @@ def version :default do
   docker_delay: 1_000,		# time (ms) to wait for containers to start up
 
   max_requests: 50_000,		# max requests each client will make
-  client_sleep: 5,		# time (ms) to sleep before sending new request
+  client_sleep: 50,		# time (ms) to sleep before sending new request
   client_stop:  60_000,		# time (ms) to stop sending further requests
   client_send:	:round_robin,	# :round_robin, :quorum or :broadcast
 
@@ -21,7 +21,7 @@ def version :default do
   print_after:  1_000,		# print transaction log summary every print_after msecs
 
   crash_server: %{},
-  window: 10
+  window: 100
 
   }
 end

@@ -1,11 +1,10 @@
 
 # distributed algorithms, n.dulay, 11 feb 19
 # coursework 2, paxos made moderately complex
-# Makefile, v3 
-
+# Makefile, v3
 CONFIG  = default
 
-SERVERS = 3 
+SERVERS = 3
 CLIENTS = 2
 
 # ----------------------------------------------------------------------

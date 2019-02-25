@@ -1,0 +1,547 @@
+time = 1000  updates done = [{1, 36}, {2, 36}, {3, 36}]
+time = 1000 requests seen = [{1, 12}, {2, 12}, {3, 12}]
+time = 1000    total seen = 36 max lag = 0
+time = 1000       CS Rate = [{1, 89.76}, {2, 90.65}, {3, 91.6}]
+time = 1000        scouts = [{1, 19}, {2, 15}, {3, 12}]
+time = 1000    commanders = [{1, 254}, {2, 278}, {3, 262}]
+
+time = 2000  updates done = [{1, 76}, {2, 76}, {3, 76}]
+time = 2000 requests seen = [{1, 26}, {2, 24}, {3, 26}]
+time = 2000    total seen = 76 max lag = 0
+time = 2000       CS Rate = [{1, 71.14}, {2, 94.79}, {3, 95.24}]
+time = 2000        scouts = [{1, 37}, {2, 26}, {3, 22}]
+time = 2000    commanders = [{1, 731}, {2, 922}, {3, 882}]
+
+time = 3000  updates done = [{1, 115}, {2, 115}, {3, 115}]
+time = 3000 requests seen = [{1, 38}, {2, 38}, {3, 39}]
+time = 3000    total seen = 115 max lag = 0
+time = 3000       CS Rate = [{1, 73.88}, {2, 96.39}, {3, 96.99}]
+time = 3000        scouts = [{1, 51}, {2, 35}, {3, 30}]
+time = 3000    commanders = [{1, 1225}, {2, 1606}, {3, 1692}]
+
+time = 4000  updates done = [{1, 154}, {2, 154}, {3, 154}]
+time = 4000 requests seen = [{1, 52}, {2, 50}, {3, 52}]
+time = 4000    total seen = 154 max lag = 0
+time = 4000       CS Rate = [{1, 74.17}, {2, 97.22}, {3, 97.54}]
+time = 4000        scouts = [{1, 62}, {2, 41}, {3, 36}]
+time = 4000    commanders = [{1, 1800}, {2, 2410}, {3, 2516}]
+
+time = 5000  updates done = [{1, 192}, {2, 192}, {3, 192}]
+time = 5000 requests seen = [{1, 64}, {2, 64}, {3, 64}]
+time = 5000    total seen = 192 max lag = 0
+time = 5000       CS Rate = [{1, 64.84}, {2, 97.69}, {3, 98.0}]
+time = 5000        scouts = [{1, 68}, {2, 46}, {3, 41}]
+time = 5000    commanders = [{1, 2312}, {2, 3117}, {3, 3400}]
+
+time = 6000  updates done = [{1, 230}, {2, 230}, {3, 230}]
+time = 6000 requests seen = [{1, 76}, {2, 76}, {3, 78}]
+time = 6000    total seen = 230 max lag = 0
+time = 6000       CS Rate = [{1, 62.41}, {2, 92.48}, {3, 98.31}]
+time = 6000        scouts = [{1, 77}, {2, 50}, {3, 45}]
+time = 6000    commanders = [{1, 2719}, {2, 3962}, {3, 4266}]
+
+time = 7000  updates done = [{1, 267}, {2, 267}, {3, 267}]
+time = 7000 requests seen = [{1, 90}, {2, 89}, {3, 90}]
+time = 7000    total seen = 269 max lag = 2
+time = 7000       CS Rate = [{1, 62.41}, {2, 84.57}, {3, 98.59}]
+time = 7000        scouts = [{1, 82}, {2, 56}, {3, 50}]
+time = 7000    commanders = [{1, 2719}, {2, 5203}, {3, 5527}]
+
+time = 8000  updates done = [{1, 305}, {2, 305}, {3, 305}]
+time = 8000 requests seen = [{1, 102}, {2, 102}, {3, 103}]
+time = 8000    total seen = 307 max lag = 2
+time = 8000       CS Rate = [{1, 60.37}, {2, 87.31}, {3, 94.26}]
+time = 8000        scouts = [{1, 89}, {2, 59}, {3, 53}]
+time = 8000    commanders = [{1, 3283}, {2, 6361}, {3, 6392}]
+
+time = 9000  updates done = [{1, 345}, {2, 345}, {3, 345}]
+time = 9000 requests seen = [{1, 115}, {2, 114}, {3, 116}]
+time = 9000    total seen = 345 max lag = 0
+time = 9000       CS Rate = [{1, 63.74}, {2, 89.02}, {3, 94.99}]
+time = 9000        scouts = [{1, 93}, {2, 62}, {3, 56}]
+time = 9000    commanders = [{1, 3591}, {2, 7370}, {3, 7380}]
+
+time = 10000  updates done = [{1, 383}, {2, 383}, {3, 383}]
+time = 10000 requests seen = [{1, 128}, {2, 127}, {3, 128}]
+time = 10000    total seen = 383 max lag = 0
+time = 10000       CS Rate = [{1, 72.09}, {2, 89.97}, {3, 95.23}]
+time = 10000        scouts = [{1, 96}, {2, 65}, {3, 59}]
+time = 10000    commanders = [{1, 4675}, {2, 8095}, {3, 7763}]
+
+time = 11000  updates done = [{1, 421}, {2, 421}, {3, 421}]
+time = 11000 requests seen = [{1, 140}, {2, 140}, {3, 141}]
+time = 11000    total seen = 421 max lag = 0
+time = 11000       CS Rate = [{1, 74.24}, {2, 83.44}, {3, 91.36}]
+time = 11000        scouts = [{1, 100}, {2, 69}, {3, 62}]
+time = 11000    commanders = [{1, 5069}, {2, 9730}, {3, 8986}]
+
+time = 12000  updates done = [{1, 457}, {2, 457}, {3, 457}]
+time = 12000 requests seen = [{1, 153}, {2, 152}, {3, 154}]
+time = 12000    total seen = 459 max lag = 2
+time = 12000       CS Rate = [{1, 58.78}, {2, 84.13}, {3, 92.75}]
+time = 12000        scouts = [{1, 106}, {2, 71}, {3, 66}]
+time = 12000    commanders = [{1, 6402}, {2, 10167}, {3, 10766}]
+
+time = 13000  updates done = [{1, 497}, {2, 497}, {3, 497}]
+time = 13000 requests seen = [{1, 166}, {2, 165}, {3, 166}]
+time = 13000    total seen = 497 max lag = 0
+time = 13000       CS Rate = [{1, 51.28}, {2, 85.52}, {3, 89.2}]
+time = 13000        scouts = [{1, 108}, {2, 74}, {3, 68}]
+time = 13000    commanders = [{1, 7338}, {2, 11148}, {3, 11727}]
+
+time = 14000  updates done = [{1, 535}, {2, 535}, {3, 535}]
+time = 14000 requests seen = [{1, 178}, {2, 178}, {3, 179}]
+time = 14000    total seen = 535 max lag = 0
+time = 14000       CS Rate = [{1, 54.4}, {2, 86.76}, {3, 86.11}]
+time = 14000        scouts = [{1, 111}, {2, 76}, {3, 70}]
+time = 14000    commanders = [{1, 7842}, {2, 12204}, {3, 12758}]
+
+time = 15000  updates done = [{1, 573}, {2, 573}, {3, 573}]
+time = 15000 requests seen = [{1, 191}, {2, 190}, {3, 192}]
+time = 15000    total seen = 573 max lag = 0
+time = 15000       CS Rate = [{1, 54.4}, {2, 87.32}, {3, 87.22}]
+time = 15000        scouts = [{1, 113}, {2, 77}, {3, 72}]
+time = 15000    commanders = [{1, 7842}, {2, 12763}, {3, 13877}]
+
+time = 16000  updates done = [{1, 605}, {2, 605}, {3, 605}]
+time = 16000 requests seen = [{1, 204}, {2, 203}, {3, 204}]
+time = 16000    total seen = 611 max lag = 6
+time = 16000       CS Rate = [{1, 54.4}, {2, 84.24}, {3, 88.21}]
+time = 16000        scouts = [{1, 115}, {2, 80}, {3, 74}]
+time = 16000    commanders = [{1, 7842}, {2, 13932}, {3, 15070}]
+
+time = 17000  updates done = [{1, 647}, {2, 647}, {3, 647}]
+time = 17000 requests seen = [{1, 216}, {2, 215}, {3, 216}]
+time = 17000    total seen = 647 max lag = 0
+time = 17000       CS Rate = [{1, 50.42}, {2, 85.53}, {3, 89.13}]
+time = 17000        scouts = [{1, 118}, {2, 81}, {3, 76}]
+time = 17000    commanders = [{1, 8461}, {2, 15188}, {3, 16343}]
+
+time = 18000  updates done = [{1, 677}, {2, 677}, {3, 677}]
+time = 18000 requests seen = [{1, 227}, {2, 226}, {3, 228}]
+time = 18000    total seen = 681 max lag = 4
+time = 18000       CS Rate = [{1, 50.45}, {2, 86.67}, {3, 85.67}]
+time = 18000        scouts = [{1, 121}, {2, 83}, {3, 78}]
+time = 18000    commanders = [{1, 9798}, {2, 16510}, {3, 17003}]
+
+time = 19000  updates done = [{1, 719}, {2, 719}, {3, 719}]
+time = 19000 requests seen = [{1, 240}, {2, 239}, {3, 240}]
+time = 19000    total seen = 719 max lag = 0
+time = 19000       CS Rate = [{1, 50.45}, {2, 87.72}, {3, 86.75}]
+time = 19000        scouts = [{1, 123}, {2, 85}, {3, 79}]
+time = 19000    commanders = [{1, 9798}, {2, 17929}, {3, 18403}]
+
+time = 20000  updates done = [{1, 753}, {2, 753}, {3, 753}]
+time = 20000 requests seen = [{1, 251}, {2, 250}, {3, 252}]
+time = 20000    total seen = 753 max lag = 0
+time = 20000       CS Rate = [{1, 50.45}, {2, 88.2}, {3, 87.73}]
+time = 20000        scouts = [{1, 126}, {2, 86}, {3, 81}]
+time = 20000    commanders = [{1, 9798}, {2, 18673}, {3, 19891}]
+
+time = 21000  updates done = [{1, 791}, {2, 791}, {3, 791}]
+time = 21000 requests seen = [{1, 264}, {2, 263}, {3, 264}]
+time = 21000    total seen = 791 max lag = 0
+time = 21000       CS Rate = [{1, 50.45}, {2, 84.75}, {3, 88.2}]
+time = 21000        scouts = [{1, 127}, {2, 87}, {3, 82}]
+time = 21000    commanders = [{1, 9798}, {2, 19434}, {3, 20689}]
+
+time = 22000  updates done = [{1, 828}, {2, 828}, {3, 828}]
+time = 22000 requests seen = [{1, 276}, {2, 275}, {3, 277}]
+time = 22000    total seen = 828 max lag = 0
+time = 22000       CS Rate = [{1, 46.63}, {2, 85.92}, {3, 88.64}]
+time = 22000        scouts = [{1, 129}, {2, 89}, {3, 83}]
+time = 22000    commanders = [{1, 10601}, {2, 21064}, {3, 21500}]
+
+time = 23000  updates done = [{1, 861}, {2, 861}, {3, 861}]
+time = 23000 requests seen = [{1, 287}, {2, 286}, {3, 288}]
+time = 23000    total seen = 861 max lag = 0
+time = 23000       CS Rate = [{1, 46.63}, {2, 82.62}, {3, 89.47}]
+time = 23000        scouts = [{1, 131}, {2, 90}, {3, 85}]
+time = 23000    commanders = [{1, 10601}, {2, 21909}, {3, 23201}]
+
+time = 24000  updates done = [{1, 897}, {2, 897}, {3, 897}]
+time = 24000 requests seen = [{1, 299}, {2, 298}, {3, 300}]
+time = 24000    total seen = 897 max lag = 0
+time = 24000       CS Rate = [{1, 46.63}, {2, 83.3}, {3, 89.85}]
+time = 24000        scouts = [{1, 132}, {2, 91}, {3, 86}]
+time = 24000    commanders = [{1, 10601}, {2, 22799}, {3, 24099}]
+
+time = 25000  updates done = [{1, 929}, {2, 929}, {3, 929}]
+time = 25000 requests seen = [{1, 312}, {2, 310}, {3, 312}]
+time = 25000    total seen = 934 max lag = 5
+time = 25000       CS Rate = [{1, 50.89}, {2, 83.95}, {3, 89.85}]
+time = 25000        scouts = [{1, 134}, {2, 92}, {3, 87}]
+time = 25000    commanders = [{1, 11524}, {2, 23729}, {3, 24104}]
+
+time = 26000  updates done = [{1, 971}, {2, 971}, {3, 971}]
+time = 26000 requests seen = [{1, 324}, {2, 323}, {3, 324}]
+time = 26000    total seen = 971 max lag = 0
+time = 26000       CS Rate = [{1, 47.02}, {2, 84.56}, {3, 90.6}]
+time = 26000        scouts = [{1, 137}, {2, 94}, {3, 88}]
+time = 26000    commanders = [{1, 12474}, {2, 24684}, {3, 26020}]
+
+time = 27000  updates done = [{1, 1008}, {2, 1008}, {3, 1008}]
+time = 27000 requests seen = [{1, 336}, {2, 335}, {3, 337}]
+time = 27000    total seen = 1008 max lag = 0
+time = 27000       CS Rate = [{1, 47.02}, {2, 85.71}, {3, 90.93}]
+time = 27000        scouts = [{1, 139}, {2, 95}, {3, 89}]
+time = 27000    commanders = [{1, 12474}, {2, 26675}, {3, 27008}]
+
+time = 28000  updates done = [{1, 1044}, {2, 1044}, {3, 1044}]
+time = 28000 requests seen = [{1, 348}, {2, 347}, {3, 349}]
+time = 28000    total seen = 1044 max lag = 0
+time = 28000       CS Rate = [{1, 51.03}, {2, 86.25}, {3, 91.26}]
+time = 28000        scouts = [{1, 140}, {2, 96}, {3, 90}]
+time = 28000    commanders = [{1, 13497}, {2, 27724}, {3, 28044}]
+
+time = 29000  updates done = [{1, 1078}, {2, 1078}, {3, 1078}]
+time = 29000 requests seen = [{1, 359}, {2, 359}, {3, 360}]
+time = 29000    total seen = 1078 max lag = 0
+time = 29000       CS Rate = [{1, 51.03}, {2, 86.76}, {3, 88.38}]
+time = 29000        scouts = [{1, 142}, {2, 97}, {3, 92}]
+time = 29000    commanders = [{1, 13497}, {2, 28804}, {3, 30179}]
+
+time = 30000  updates done = [{1, 1110}, {2, 1110}, {3, 1110}]
+time = 30000 requests seen = [{1, 370}, {2, 369}, {3, 371}]
+time = 30000    total seen = 1110 max lag = 0
+time = 30000       CS Rate = [{1, 54.69}, {2, 86.76}, {3, 88.79}]
+time = 30000        scouts = [{1, 144}, {2, 98}, {3, 93}]
+time = 30000    commanders = [{1, 14589}, {2, 28804}, {3, 31299}]
+
+time = 31000  updates done = [{1, 1147}, {2, 1147}, {3, 1147}]
+time = 31000 requests seen = [{1, 382}, {2, 382}, {3, 383}]
+time = 31000    total seen = 1147 max lag = 0
+time = 31000       CS Rate = [{1, 57.96}, {2, 87.27}, {3, 88.8}]
+time = 31000        scouts = [{1, 145}, {2, 99}, {3, 93}]
+time = 31000    commanders = [{1, 15727}, {2, 29951}, {3, 31318}]
+
+time = 32000  updates done = [{1, 1177}, {2, 1177}, {3, 1177}]
+time = 32000 requests seen = [{1, 393}, {2, 392}, {3, 394}]
+time = 32000    total seen = 1179 max lag = 2
+time = 32000       CS Rate = [{1, 57.96}, {2, 87.22}, {3, 89.2}]
+time = 32000        scouts = [{1, 147}, {2, 100}, {3, 94}]
+time = 32000    commanders = [{1, 15727}, {2, 30665}, {3, 32495}]
+
+time = 33000  updates done = [{1, 1217}, {2, 1217}, {3, 1217}]
+time = 33000 requests seen = [{1, 406}, {2, 405}, {3, 406}]
+time = 33000    total seen = 1217 max lag = 0
+time = 33000       CS Rate = [{1, 57.96}, {2, 87.74}, {3, 89.59}]
+time = 33000        scouts = [{1, 148}, {2, 100}, {3, 95}]
+time = 33000    commanders = [{1, 15727}, {2, 31135}, {3, 33712}]
+
+time = 34000  updates done = [{1, 1251}, {2, 1251}, {3, 1251}]
+time = 34000 requests seen = [{1, 418}, {2, 418}, {3, 418}]
+time = 34000    total seen = 1254 max lag = 3
+time = 34000       CS Rate = [{1, 57.96}, {2, 88.21}, {3, 89.59}]
+time = 34000        scouts = [{1, 149}, {2, 101}, {3, 96}]
+time = 34000    commanders = [{1, 15727}, {2, 32387}, {3, 33721}]
+
+time = 35000  updates done = [{1, 1293}, {2, 1293}, {3, 1293}]
+time = 35000 requests seen = [{1, 431}, {2, 430}, {3, 432}]
+time = 35000    total seen = 1293 max lag = 0
+time = 35000       CS Rate = [{1, 57.96}, {2, 88.67}, {3, 89.97}]
+time = 35000        scouts = [{1, 150}, {2, 102}, {3, 96}]
+time = 35000    commanders = [{1, 15727}, {2, 33680}, {3, 35003}]
+
+time = 36000  updates done = [{1, 1330}, {2, 1330}, {3, 1330}]
+time = 36000 requests seen = [{1, 444}, {2, 442}, {3, 444}]
+time = 36000    total seen = 1330 max lag = 0
+time = 36000       CS Rate = [{1, 57.96}, {2, 89.1}, {3, 86.7}]
+time = 36000        scouts = [{1, 151}, {2, 103}, {3, 97}]
+time = 36000    commanders = [{1, 15727}, {2, 35035}, {3, 36323}]
+
+time = 37000  updates done = [{1, 1365}, {2, 1365}, {3, 1365}]
+time = 37000 requests seen = [{1, 455}, {2, 455}, {3, 455}]
+time = 37000    total seen = 1365 max lag = 0
+time = 37000       CS Rate = [{1, 57.96}, {2, 89.51}, {3, 87.17}]
+time = 37000        scouts = [{1, 152}, {2, 104}, {3, 98}]
+time = 37000    commanders = [{1, 15727}, {2, 36410}, {3, 37671}]
+
+time = 38000  updates done = [{1, 1400}, {2, 1400}, {3, 1400}]
+time = 38000 requests seen = [{1, 467}, {2, 466}, {3, 467}]
+time = 38000    total seen = 1400 max lag = 0
+time = 38000       CS Rate = [{1, 57.96}, {2, 89.51}, {3, 87.63}]
+time = 38000        scouts = [{1, 153}, {2, 104}, {3, 99}]
+time = 38000    commanders = [{1, 15727}, {2, 36425}, {3, 39071}]
+
+time = 39000  updates done = [{1, 1431}, {2, 1431}, {3, 1431}]
+time = 39000 requests seen = [{1, 478}, {2, 477}, {3, 478}]
+time = 39000    total seen = 1433 max lag = 2
+time = 39000       CS Rate = [{1, 57.96}, {2, 89.91}, {3, 87.63}]
+time = 39000        scouts = [{1, 155}, {2, 105}, {3, 99}]
+time = 39000    commanders = [{1, 15727}, {2, 37857}, {3, 39082}]
+
+time = 40000  updates done = [{1, 1467}, {2, 1467}, {3, 1467}]
+time = 40000 requests seen = [{1, 489}, {2, 488}, {3, 490}]
+time = 40000    total seen = 1467 max lag = 0
+time = 40000       CS Rate = [{1, 53.12}, {2, 90.28}, {3, 88.49}]
+time = 40000        scouts = [{1, 155}, {2, 106}, {3, 101}]
+time = 40000    commanders = [{1, 17160}, {2, 39313}, {3, 41995}]
+
+time = 41000  updates done = [{1, 1492}, {2, 1492}, {3, 1492}]
+time = 41000 requests seen = [{1, 500}, {2, 500}, {3, 502}]
+time = 41000    total seen = 1502 max lag = 10
+time = 41000       CS Rate = [{1, 48.86}, {2, 86.97}, {3, 88.49}]
+time = 41000        scouts = [{1, 157}, {2, 107}, {3, 102}]
+time = 41000    commanders = [{1, 18654}, {2, 40807}, {3, 42021}]
+
+time = 42000  updates done = [{1, 1540}, {2, 1540}, {3, 1540}]
+time = 42000 requests seen = [{1, 514}, {2, 512}, {3, 514}]
+time = 42000    total seen = 1540 max lag = 0
+time = 42000       CS Rate = [{1, 48.86}, {2, 86.97}, {3, 88.9}]
+time = 42000        scouts = [{1, 158}, {2, 107}, {3, 102}]
+time = 42000    commanders = [{1, 18654}, {2, 40807}, {3, 43561}]
+
+time = 43000  updates done = [{1, 1578}, {2, 1578}, {3, 1578}]
+time = 43000 requests seen = [{1, 526}, {2, 526}, {3, 526}]
+time = 43000    total seen = 1578 max lag = 0
+time = 43000       CS Rate = [{1, 48.86}, {2, 87.46}, {3, 88.9}]
+time = 43000        scouts = [{1, 158}, {2, 108}, {3, 102}]
+time = 43000    commanders = [{1, 18654}, {2, 42385}, {3, 43569}]
+
+time = 44000  updates done = [{1, 1612}, {2, 1612}, {3, 1612}]
+time = 44000 requests seen = [{1, 538}, {2, 536}, {3, 538}]
+time = 44000    total seen = 1612 max lag = 0
+time = 44000       CS Rate = [{1, 48.86}, {2, 87.46}, {3, 89.29}]
+time = 44000        scouts = [{1, 160}, {2, 108}, {3, 103}]
+time = 44000    commanders = [{1, 18654}, {2, 42407}, {3, 45181}]
+
+time = 45000  updates done = [{1, 1648}, {2, 1648}, {3, 1648}]
+time = 45000 requests seen = [{1, 550}, {2, 548}, {3, 550}]
+time = 45000    total seen = 1648 max lag = 0
+time = 45000       CS Rate = [{1, 48.86}, {2, 87.93}, {3, 89.29}]
+time = 45000        scouts = [{1, 160}, {2, 109}, {3, 103}]
+time = 45000    commanders = [{1, 18654}, {2, 44055}, {3, 45185}]
+
+time = 46000  updates done = [{1, 1686}, {2, 1686}, {3, 1686}]
+time = 46000 requests seen = [{1, 562}, {2, 562}, {3, 562}]
+time = 46000    total seen = 1686 max lag = 0
+time = 46000       CS Rate = [{1, 48.86}, {2, 88.37}, {3, 86.12}]
+time = 46000        scouts = [{1, 161}, {2, 110}, {3, 104}]
+time = 46000    commanders = [{1, 18654}, {2, 45755}, {3, 46849}]
+
+time = 47000  updates done = [{1, 1724}, {2, 1724}, {3, 1724}]
+time = 47000 requests seen = [{1, 574}, {2, 574}, {3, 576}]
+time = 47000    total seen = 1724 max lag = 0
+time = 47000       CS Rate = [{1, 48.86}, {2, 88.38}, {3, 86.12}]
+time = 47000        scouts = [{1, 162}, {2, 110}, {3, 104}]
+time = 47000    commanders = [{1, 18654}, {2, 45793}, {3, 46849}]
+
+time = 48000  updates done = [{1, 1758}, {2, 1758}, {3, 1758}]
+time = 48000 requests seen = [{1, 586}, {2, 586}, {3, 586}]
+time = 48000    total seen = 1758 max lag = 0
+time = 48000       CS Rate = [{1, 48.86}, {2, 88.38}, {3, 86.62}]
+time = 48000        scouts = [{1, 163}, {2, 110}, {3, 105}]
+time = 48000    commanders = [{1, 18654}, {2, 45797}, {3, 48607}]
+
+time = 49000  updates done = [{1, 1794}, {2, 1794}, {3, 1794}]
+time = 49000 requests seen = [{1, 598}, {2, 597}, {3, 599}]
+time = 49000    total seen = 1794 max lag = 0
+time = 49000       CS Rate = [{1, 48.86}, {2, 88.82}, {3, 86.62}]
+time = 49000        scouts = [{1, 164}, {2, 111}, {3, 105}]
+time = 49000    commanders = [{1, 18654}, {2, 47591}, {3, 48628}]
+
+time = 50000  updates done = [{1, 1831}, {2, 1831}, {3, 1831}]
+time = 50000 requests seen = [{1, 611}, {2, 609}, {3, 611}]
+time = 50000    total seen = 1831 max lag = 0
+time = 50000       CS Rate = [{1, 48.86}, {2, 88.82}, {3, 87.11}]
+time = 50000        scouts = [{1, 164}, {2, 111}, {3, 106}]
+time = 50000    commanders = [{1, 18654}, {2, 47614}, {3, 50459}]
+
+time = 51000  updates done = [{1, 1861}, {2, 1861}, {3, 1861}]
+time = 51000 requests seen = [{1, 621}, {2, 621}, {3, 623}]
+time = 51000    total seen = 1865 max lag = 4
+time = 51000       CS Rate = [{1, 48.86}, {2, 89.24}, {3, 87.11}]
+time = 51000        scouts = [{1, 166}, {2, 112}, {3, 107}]
+time = 51000    commanders = [{1, 18654}, {2, 49476}, {3, 50468}]
+
+time = 52000  updates done = [{1, 1903}, {2, 1903}, {3, 1903}]
+time = 52000 requests seen = [{1, 635}, {2, 633}, {3, 635}]
+time = 52000    total seen = 1903 max lag = 0
+time = 52000       CS Rate = [{1, 44.43}, {2, 89.24}, {3, 87.58}]
+time = 52000        scouts = [{1, 166}, {2, 112}, {3, 107}]
+time = 52000    commanders = [{1, 20517}, {2, 49476}, {3, 52371}]
+
+time = 53000  updates done = [{1, 1938}, {2, 1938}, {3, 1938}]
+time = 53000 requests seen = [{1, 646}, {2, 645}, {3, 647}]
+time = 53000    total seen = 1938 max lag = 0
+time = 53000       CS Rate = [{1, 44.43}, {2, 89.64}, {3, 87.58}]
+time = 53000        scouts = [{1, 167}, {2, 113}, {3, 107}]
+time = 53000    commanders = [{1, 20517}, {2, 51414}, {3, 52377}]
+
+time = 54000  updates done = [{1, 1974}, {2, 1974}, {3, 1974}]
+time = 54000 requests seen = [{1, 659}, {2, 657}, {3, 659}]
+time = 54000    total seen = 1975 max lag = 1
+time = 54000       CS Rate = [{1, 44.43}, {2, 89.64}, {3, 88.03}]
+time = 54000        scouts = [{1, 169}, {2, 114}, {3, 108}]
+time = 54000    commanders = [{1, 20517}, {2, 51417}, {3, 54352}]
+
+time = 55000  updates done = [{1, 2011}, {2, 2011}, {3, 2011}]
+time = 55000 requests seen = [{1, 671}, {2, 669}, {3, 671}]
+time = 55000    total seen = 2011 max lag = 0
+time = 55000       CS Rate = [{1, 40.52}, {2, 90.03}, {3, 88.45}]
+time = 55000        scouts = [{1, 169}, {2, 114}, {3, 109}]
+time = 55000    commanders = [{1, 22494}, {2, 53419}, {3, 56363}]
+
+time = 56000  updates done = [{1, 2045}, {2, 2045}, {3, 2045}]
+time = 56000 requests seen = [{1, 683}, {2, 682}, {3, 683}]
+time = 56000    total seen = 2048 max lag = 3
+time = 56000       CS Rate = [{1, 40.52}, {2, 90.03}, {3, 88.46}]
+time = 56000        scouts = [{1, 170}, {2, 115}, {3, 109}]
+time = 56000    commanders = [{1, 22494}, {2, 53419}, {3, 56398}]
+
+time = 57000  updates done = [{1, 2085}, {2, 2085}, {3, 2085}]
+time = 57000 requests seen = [{1, 695}, {2, 694}, {3, 696}]
+time = 57000    total seen = 2085 max lag = 0
+time = 57000       CS Rate = [{1, 40.52}, {2, 90.4}, {3, 88.46}]
+time = 57000        scouts = [{1, 171}, {2, 115}, {3, 109}]
+time = 57000    commanders = [{1, 22494}, {2, 55504}, {3, 56398}]
+
+time = 58000  updates done = [{1, 2121}, {2, 2121}, {3, 2121}]
+time = 58000 requests seen = [{1, 707}, {2, 706}, {3, 708}]
+time = 58000    total seen = 2121 max lag = 0
+time = 58000       CS Rate = [{1, 40.52}, {2, 90.41}, {3, 88.88}]
+time = 58000        scouts = [{1, 171}, {2, 115}, {3, 110}]
+time = 58000    commanders = [{1, 22494}, {2, 55529}, {3, 58519}]
+
+time = 59000  updates done = [{1, 2155}, {2, 2155}, {3, 2155}]
+time = 59000 requests seen = [{1, 718}, {2, 718}, {3, 719}]
+time = 59000    total seen = 2155 max lag = 0
+time = 59000       CS Rate = [{1, 40.52}, {2, 90.77}, {3, 88.88}]
+time = 59000        scouts = [{1, 172}, {2, 116}, {3, 110}]
+time = 59000    commanders = [{1, 22494}, {2, 57684}, {3, 58537}]
+
+  Client 1 going to sleep, sent = 1094
+  Client 2 going to sleep, sent = 1084
+time = 60000  updates done = [{1, 2178}, {2, 2178}, {3, 2178}]
+time = 60000 requests seen = [{1, 726}, {2, 725}, {3, 727}]
+time = 60000    total seen = 2178 max lag = 0
+time = 60000       CS Rate = [{1, 40.52}, {2, 90.76}, {3, 89.28}]
+time = 60000        scouts = [{1, 173}, {2, 116}, {3, 111}]
+time = 60000    commanders = [{1, 22494}, {2, 57689}, {3, 60715}]
+
+time = 61000  updates done = [{1, 2178}, {2, 2178}, {3, 2178}]
+time = 61000 requests seen = [{1, 726}, {2, 725}, {3, 727}]
+time = 61000    total seen = 2178 max lag = 0
+time = 61000       CS Rate = [{1, 40.52}, {2, 91.1}, {3, 89.28}]
+time = 61000        scouts = [{1, 173}, {2, 117}, {3, 111}]
+time = 61000    commanders = [{1, 22494}, {2, 59867}, {3, 60715}]
+
+time = 62000  updates done = [{1, 2178}, {2, 2178}, {3, 2178}]
+time = 62000 requests seen = [{1, 726}, {2, 725}, {3, 727}]
+time = 62000    total seen = 2178 max lag = 0
+time = 62000       CS Rate = [{1, 40.52}, {2, 91.1}, {3, 89.28}]
+time = 62000        scouts = [{1, 174}, {2, 117}, {3, 111}]
+time = 62000    commanders = [{1, 22494}, {2, 59867}, {3, 60715}]
+
+time = 63000  updates done = [{1, 2178}, {2, 2178}, {3, 2178}]
+time = 63000 requests seen = [{1, 726}, {2, 725}, {3, 727}]
+time = 63000    total seen = 2178 max lag = 0
+time = 63000       CS Rate = [{1, 45.77}, {2, 91.1}, {3, 89.28}]
+time = 63000        scouts = [{1, 175}, {2, 117}, {3, 111}]
+time = 63000    commanders = [{1, 24672}, {2, 59867}, {3, 60715}]
+
+time = 64000  updates done = [{1, 2178}, {2, 2178}, {3, 2178}]
+time = 64000 requests seen = [{1, 726}, {2, 725}, {3, 727}]
+time = 64000    total seen = 2178 max lag = 0
+time = 64000       CS Rate = [{1, 45.77}, {2, 91.1}, {3, 89.28}]
+time = 64000        scouts = [{1, 175}, {2, 117}, {3, 111}]
+time = 64000    commanders = [{1, 24672}, {2, 59867}, {3, 60715}]
+
+time = 65000  updates done = [{1, 2178}, {2, 2178}, {3, 2178}]
+time = 65000 requests seen = [{1, 726}, {2, 725}, {3, 727}]
+time = 65000    total seen = 2178 max lag = 0
+time = 65000       CS Rate = [{1, 45.77}, {2, 91.1}, {3, 89.28}]
+time = 65000        scouts = [{1, 175}, {2, 117}, {3, 111}]
+time = 65000    commanders = [{1, 24672}, {2, 59867}, {3, 60715}]
+
+time = 66000  updates done = [{1, 2178}, {2, 2178}, {3, 2178}]
+time = 66000 requests seen = [{1, 726}, {2, 725}, {3, 727}]
+time = 66000    total seen = 2178 max lag = 0
+time = 66000       CS Rate = [{1, 45.77}, {2, 91.1}, {3, 89.28}]
+time = 66000        scouts = [{1, 175}, {2, 117}, {3, 111}]
+time = 66000    commanders = [{1, 24672}, {2, 59867}, {3, 60715}]
+
+time = 67000  updates done = [{1, 2178}, {2, 2178}, {3, 2178}]
+time = 67000 requests seen = [{1, 726}, {2, 725}, {3, 727}]
+time = 67000    total seen = 2178 max lag = 0
+time = 67000       CS Rate = [{1, 45.77}, {2, 91.1}, {3, 89.28}]
+time = 67000        scouts = [{1, 175}, {2, 117}, {3, 111}]
+time = 67000    commanders = [{1, 24672}, {2, 59867}, {3, 60715}]
+
+time = 68000  updates done = [{1, 2178}, {2, 2178}, {3, 2178}]
+time = 68000 requests seen = [{1, 726}, {2, 725}, {3, 727}]
+time = 68000    total seen = 2178 max lag = 0
+time = 68000       CS Rate = [{1, 45.77}, {2, 91.1}, {3, 89.28}]
+time = 68000        scouts = [{1, 175}, {2, 117}, {3, 111}]
+time = 68000    commanders = [{1, 24672}, {2, 59867}, {3, 60715}]
+
+time = 69000  updates done = [{1, 2178}, {2, 2178}, {3, 2178}]
+time = 69000 requests seen = [{1, 726}, {2, 725}, {3, 727}]
+time = 69000    total seen = 2178 max lag = 0
+time = 69000       CS Rate = [{1, 45.77}, {2, 91.1}, {3, 89.28}]
+time = 69000        scouts = [{1, 175}, {2, 117}, {3, 111}]
+time = 69000    commanders = [{1, 24672}, {2, 59867}, {3, 60715}]
+
+time = 70000  updates done = [{1, 2178}, {2, 2178}, {3, 2178}]
+time = 70000 requests seen = [{1, 726}, {2, 725}, {3, 727}]
+time = 70000    total seen = 2178 max lag = 0
+time = 70000       CS Rate = [{1, 45.77}, {2, 91.1}, {3, 89.28}]
+time = 70000        scouts = [{1, 175}, {2, 117}, {3, 111}]
+time = 70000    commanders = [{1, 24672}, {2, 59867}, {3, 60715}]
+
+time = 71000  updates done = [{1, 2178}, {2, 2178}, {3, 2178}]
+time = 71000 requests seen = [{1, 726}, {2, 725}, {3, 727}]
+time = 71000    total seen = 2178 max lag = 0
+time = 71000       CS Rate = [{1, 45.77}, {2, 91.1}, {3, 89.28}]
+time = 71000        scouts = [{1, 175}, {2, 117}, {3, 111}]
+time = 71000    commanders = [{1, 24672}, {2, 59867}, {3, 60715}]
+
+time = 72000  updates done = [{1, 2178}, {2, 2178}, {3, 2178}]
+time = 72000 requests seen = [{1, 726}, {2, 725}, {3, 727}]
+time = 72000    total seen = 2178 max lag = 0
+time = 72000       CS Rate = [{1, 45.77}, {2, 91.1}, {3, 89.28}]
+time = 72000        scouts = [{1, 175}, {2, 117}, {3, 111}]
+time = 72000    commanders = [{1, 24672}, {2, 59867}, {3, 60715}]
+
+time = 73000  updates done = [{1, 2178}, {2, 2178}, {3, 2178}]
+time = 73000 requests seen = [{1, 726}, {2, 725}, {3, 727}]
+time = 73000    total seen = 2178 max lag = 0
+time = 73000       CS Rate = [{1, 45.77}, {2, 91.1}, {3, 89.28}]
+time = 73000        scouts = [{1, 175}, {2, 117}, {3, 111}]
+time = 73000    commanders = [{1, 24672}, {2, 59867}, {3, 60715}]
+
+time = 74000  updates done = [{1, 2178}, {2, 2178}, {3, 2178}]
+time = 74000 requests seen = [{1, 726}, {2, 725}, {3, 727}]
+time = 74000    total seen = 2178 max lag = 0
+time = 74000       CS Rate = [{1, 45.77}, {2, 91.1}, {3, 89.28}]
+time = 74000        scouts = [{1, 175}, {2, 117}, {3, 111}]
+time = 74000    commanders = [{1, 24672}, {2, 59867}, {3, 60715}]
+
+time = 75000  updates done = [{1, 2178}, {2, 2178}, {3, 2178}]
+time = 75000 requests seen = [{1, 726}, {2, 725}, {3, 727}]
+time = 75000    total seen = 2178 max lag = 0
+time = 75000       CS Rate = [{1, 45.77}, {2, 91.1}, {3, 89.28}]
+time = 75000        scouts = [{1, 175}, {2, 117}, {3, 111}]
+time = 75000    commanders = [{1, 24672}, {2, 59867}, {3, 60715}]
+
+time = 76000  updates done = [{1, 2178}, {2, 2178}, {3, 2178}]
+time = 76000 requests seen = [{1, 726}, {2, 725}, {3, 727}]
+time = 76000    total seen = 2178 max lag = 0
+time = 76000       CS Rate = [{1, 45.77}, {2, 91.1}, {3, 89.28}]
+time = 76000        scouts = [{1, 175}, {2, 117}, {3, 111}]
+time = 76000    commanders = [{1, 24672}, {2, 59867}, {3, 60715}]
+
+time = 77000  updates done = [{1, 2178}, {2, 2178}, {3, 2178}]
+time = 77000 requests seen = [{1, 726}, {2, 725}, {3, 727}]
+time = 77000    total seen = 2178 max lag = 0
+time = 77000       CS Rate = [{1, 45.77}, {2, 91.1}, {3, 89.28}]
+time = 77000        scouts = [{1, 175}, {2, 117}, {3, 111}]
+time = 77000    commanders = [{1, 24672}, {2, 59867}, {3, 60715}]
+
+time = 78000  updates done = [{1, 2178}, {2, 2178}, {3, 2178}]
+time = 78000 requests seen = [{1, 726}, {2, 725}, {3, 727}]
+time = 78000    total seen = 2178 max lag = 0
+time = 78000       CS Rate = [{1, 45.77}, {2, 91.1}, {3, 89.28}]
+time = 78000        scouts = [{1, 175}, {2, 117}, {3, 111}]
+time = 78000    commanders = [{1, 24672}, {2, 59867}, {3, 60715}]
