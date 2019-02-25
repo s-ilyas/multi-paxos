@@ -1,3 +1,5 @@
+# Ilyas Saltykov (is916) and Shashwat Dalal (spd16)
+
 defmodule Replica do
 
   def start(config, database_pid, monitor) do
